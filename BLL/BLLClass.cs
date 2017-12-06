@@ -1,31 +1,36 @@
-﻿using DAL;
+﻿using System.Data.SqlClient;
+using DAL;
 using FilmDTOLibrary;
-using System;
 using System.Collections.Generic;
-using System.Data.Linq;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
-    public partial class BLLClass
+    public class BLLClass
     {
-        DalDataContext Dal;
-        
-        
         public BLLClass()
         {
-            Dal = new DalDataContext();
 
         }
 
-        public Actor GetActorbyID(int i) 
+        public List<FilmDTO> GetFilms(int debut, int nb)
         {
-            List <Actor> ListAct = new List<Actor>();
-            var query = from a in Dal.Actors where a.id == i select a;
-            return query.FirstOrDefault<Actor>();
-
+            return DalSingleton.Singleton().GetFilms(debut, nb);
         }
+
+        public List<GenreDTO> GetGenreWithId(int id)
+        {
+            return DalSingleton.Singleton().GetGenreWithId(id);
+        }
+
+        public List<ActeurDTO> GetActorWithId(int id)
+        {
+            return DalSingleton.Singleton().GetActorWithId(id);
+        }
+
+        public List<RealisateurDTO> GetDirectorWithId(int id)
+        {
+            return DalSingleton.Singleton().GetDirectorWithId(id);
+        }
+
     }
 }

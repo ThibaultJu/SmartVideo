@@ -41,7 +41,9 @@ namespace FilmDTOLibrary
                 name = value;
             }
         }
-
+        public GenreDTO()
+        {
+        }
         public GenreDTO(int _id, string _name)
         {
             Id = _id;

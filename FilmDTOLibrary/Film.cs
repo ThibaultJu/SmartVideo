@@ -22,6 +22,7 @@ namespace FilmDTOLibrary
         private string original_title;
         private int runtime;
         private string posterpath;
+        private string trailer;
 
         public int Id
         {
@@ -126,6 +127,8 @@ namespace FilmDTOLibrary
                 acteurlist = value;
             }
         }
+
+        public string Trailer { get => trailer; set => trailer = value; }
 
         // Préparation de la classe pour recevoir les données
         public FilmDTO()

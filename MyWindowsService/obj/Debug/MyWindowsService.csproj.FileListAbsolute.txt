@@ -1,0 +1,17 @@
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\obj\Debug\MyWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\obj\Debug\MyWindowsService.csproj.CoreCompileInputs.cache
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\MyWindowsService.exe.config
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\MyWindowsService.exe
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\MyWindowsService.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\obj\Debug\MyWindowsService.exe
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\obj\Debug\MyWindowsService.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\WcfServ.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\BLL.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\FilmDTOLibrary.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\DAL.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\WcfServ.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\WcfServ.dll.config
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\BLL.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\DAL.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\MyWindowsService\bin\Debug\DAL.dll.config
