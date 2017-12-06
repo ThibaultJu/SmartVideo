@@ -1,0 +1,11 @@
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\BLL.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\BLL.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\DAL.exe
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\FilmDTOLibrary.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\DAL.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\DAL.exe.config
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\obj\Debug\BLL.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\obj\Debug\BLL.pdb

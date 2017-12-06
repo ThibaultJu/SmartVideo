@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3EDA6FF-E680-408C-8C88-D615DA96A1B4}</ProjectGuid>
+    <ProjectGuid>{7DB165FE-5FE7-40A8-90FA-BE187D2E9421}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,15 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dal.cs">
-      <DependentUpon>Dal.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Dal.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dal.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DalSingleton.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,22 +65,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Dal.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Dal.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dal.dbml.layout">
-      <DependentUpon>Dal.dbml</DependentUpon>
-    </None>
-    <None Include="Properties\DataSources\Actor.datasource" />
-    <None Include="Properties\DataSources\DalDataContext.datasource" />
-    <None Include="Properties\DataSources\Film.datasource" />
-    <None Include="Properties\DataSources\FilmActor.datasource" />
-    <None Include="Properties\DataSources\FilmGenre.datasource" />
-    <None Include="Properties\DataSources\FilmRealisateur.datasource" />
-    <None Include="Properties\DataSources\Genre.datasource" />
-    <None Include="Properties\DataSources\Realisateur.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,7 +79,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{0fa6e1d0-772d-48ff-8644-82655ed908ae}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{C3EDA6FF-E680-408C-8C88-D615DA96A1B4}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilmDTOLibrary\FilmDTOLibrary.csproj">
+      <Project>{4577d9f4-496f-4891-96b0-da152984bfb6}</Project>
+      <Name>FilmDTOLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
