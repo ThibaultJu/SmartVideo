@@ -1,0 +1,14 @@
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\SmartWCFService.dll.config
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\SmartWCFService.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\SmartWCFService.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\BLL.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\FilmDTOLibrary.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\DAL.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\BLL.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\FilmDTOLibrary.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\DAL.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\bin\DAL.dll.config
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\obj\Debug\SmartWCFService.csprojResolveAssemblyReference.cache
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\obj\Debug\SmartWCFService.csproj.CoreCompileInputs.cache
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\obj\Debug\SmartWCFService.dll
+C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartWCFService\obj\Debug\SmartWCFService.pdb

@@ -40,7 +40,9 @@ namespace FilmDTOLibrary
                 name = value;
             }
         }
-
+        public RealisateurDTO()
+        {
+        }
         public RealisateurDTO(int _id, string _name)
         {
             Id = _id;

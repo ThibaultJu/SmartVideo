@@ -56,6 +56,9 @@ namespace FilmDTOLibrary
                 character = value;
             }
         }
+        public ActeurDTO()
+        {
+        }
 
         public ActeurDTO(int _id, string _name, string _character)
         {

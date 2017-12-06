@@ -33,9 +33,6 @@ namespace DAL
     partial void InsertActor(Actor instance);
     partial void UpdateActor(Actor instance);
     partial void DeleteActor(Actor instance);
-    partial void InsertFilm(Film instance);
-    partial void UpdateFilm(Film instance);
-    partial void DeleteFilm(Film instance);
     partial void InsertFilmActor(FilmActor instance);
     partial void UpdateFilmActor(FilmActor instance);
     partial void DeleteFilmActor(FilmActor instance);
@@ -51,6 +48,9 @@ namespace DAL
     partial void InsertRealisateur(Realisateur instance);
     partial void UpdateRealisateur(Realisateur instance);
     partial void DeleteRealisateur(Realisateur instance);
+    partial void InsertFilm(Film instance);
+    partial void UpdateFilm(Film instance);
+    partial void DeleteFilm(Film instance);
     #endregion
 		
 		public DalDataContext() : 
@@ -91,14 +91,6 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<Film> Films
-		{
-			get
-			{
-				return this.GetTable<Film>();
-			}
-		}
-		
 		public System.Data.Linq.Table<FilmActor> FilmActors
 		{
 			get
@@ -136,6 +128,14 @@ namespace DAL
 			get
 			{
 				return this.GetTable<Realisateur>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Film> Films
+		{
+			get
+			{
+				return this.GetTable<Film>();
 			}
 		}
 	}
@@ -275,248 +275,6 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.Actor = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Film")]
-	public partial class Film : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _title;
-		
-		private string _original_title;
-		
-		private System.Nullable<int> _runtime;
-		
-		private string _posterpath;
-		
-		private EntitySet<FilmActor> _FilmActors;
-		
-		private EntitySet<FilmGenre> _FilmGenres;
-		
-		private EntitySet<FilmRealisateur> _FilmRealisateurs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OntitleChanging(string value);
-    partial void OntitleChanged();
-    partial void Onoriginal_titleChanging(string value);
-    partial void Onoriginal_titleChanged();
-    partial void OnruntimeChanging(System.Nullable<int> value);
-    partial void OnruntimeChanged();
-    partial void OnposterpathChanging(string value);
-    partial void OnposterpathChanged();
-    #endregion
-		
-		public Film()
-		{
-			this._FilmActors = new EntitySet<FilmActor>(new Action<FilmActor>(this.attach_FilmActors), new Action<FilmActor>(this.detach_FilmActors));
-			this._FilmGenres = new EntitySet<FilmGenre>(new Action<FilmGenre>(this.attach_FilmGenres), new Action<FilmGenre>(this.detach_FilmGenres));
-			this._FilmRealisateurs = new EntitySet<FilmRealisateur>(new Action<FilmRealisateur>(this.attach_FilmRealisateurs), new Action<FilmRealisateur>(this.detach_FilmRealisateurs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string title
-		{
-			get
-			{
-				return this._title;
-			}
-			set
-			{
-				if ((this._title != value))
-				{
-					this.OntitleChanging(value);
-					this.SendPropertyChanging();
-					this._title = value;
-					this.SendPropertyChanged("title");
-					this.OntitleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_original_title", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string original_title
-		{
-			get
-			{
-				return this._original_title;
-			}
-			set
-			{
-				if ((this._original_title != value))
-				{
-					this.Onoriginal_titleChanging(value);
-					this.SendPropertyChanging();
-					this._original_title = value;
-					this.SendPropertyChanged("original_title");
-					this.Onoriginal_titleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_runtime", DbType="Int")]
-		public System.Nullable<int> runtime
-		{
-			get
-			{
-				return this._runtime;
-			}
-			set
-			{
-				if ((this._runtime != value))
-				{
-					this.OnruntimeChanging(value);
-					this.SendPropertyChanging();
-					this._runtime = value;
-					this.SendPropertyChanged("runtime");
-					this.OnruntimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_posterpath", DbType="VarChar(100)")]
-		public string posterpath
-		{
-			get
-			{
-				return this._posterpath;
-			}
-			set
-			{
-				if ((this._posterpath != value))
-				{
-					this.OnposterpathChanging(value);
-					this.SendPropertyChanging();
-					this._posterpath = value;
-					this.SendPropertyChanged("posterpath");
-					this.OnposterpathChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmActor", Storage="_FilmActors", ThisKey="id", OtherKey="id_film")]
-		public EntitySet<FilmActor> FilmActors
-		{
-			get
-			{
-				return this._FilmActors;
-			}
-			set
-			{
-				this._FilmActors.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmGenre", Storage="_FilmGenres", ThisKey="id", OtherKey="id_film")]
-		public EntitySet<FilmGenre> FilmGenres
-		{
-			get
-			{
-				return this._FilmGenres;
-			}
-			set
-			{
-				this._FilmGenres.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmRealisateur", Storage="_FilmRealisateurs", ThisKey="id", OtherKey="id_film")]
-		public EntitySet<FilmRealisateur> FilmRealisateurs
-		{
-			get
-			{
-				return this._FilmRealisateurs;
-			}
-			set
-			{
-				this._FilmRealisateurs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_FilmActors(FilmActor entity)
-		{
-			this.SendPropertyChanging();
-			entity.Film = this;
-		}
-		
-		private void detach_FilmActors(FilmActor entity)
-		{
-			this.SendPropertyChanging();
-			entity.Film = null;
-		}
-		
-		private void attach_FilmGenres(FilmGenre entity)
-		{
-			this.SendPropertyChanging();
-			entity.Film = this;
-		}
-		
-		private void detach_FilmGenres(FilmGenre entity)
-		{
-			this.SendPropertyChanging();
-			entity.Film = null;
-		}
-		
-		private void attach_FilmRealisateurs(FilmRealisateur entity)
-		{
-			this.SendPropertyChanging();
-			entity.Film = this;
-		}
-		
-		private void detach_FilmRealisateurs(FilmRealisateur entity)
-		{
-			this.SendPropertyChanging();
-			entity.Film = null;
 		}
 	}
 	
@@ -724,9 +482,9 @@ namespace DAL
 		
 		private int _id_genre;
 		
-		private EntityRef<Film> _Film;
-		
 		private EntityRef<Genre> _Genre;
+		
+		private EntityRef<Film> _Film;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -742,8 +500,8 @@ namespace DAL
 		
 		public FilmGenre()
 		{
-			this._Film = default(EntityRef<Film>);
 			this._Genre = default(EntityRef<Genre>);
+			this._Film = default(EntityRef<Film>);
 			OnCreated();
 		}
 		
@@ -815,40 +573,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmGenre", Storage="_Film", ThisKey="id_film", OtherKey="id", IsForeignKey=true)]
-		public Film Film
-		{
-			get
-			{
-				return this._Film.Entity;
-			}
-			set
-			{
-				Film previousValue = this._Film.Entity;
-				if (((previousValue != value) 
-							|| (this._Film.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Film.Entity = null;
-						previousValue.FilmGenres.Remove(this);
-					}
-					this._Film.Entity = value;
-					if ((value != null))
-					{
-						value.FilmGenres.Add(this);
-						this._id_film = value.id;
-					}
-					else
-					{
-						this._id_film = default(int);
-					}
-					this.SendPropertyChanged("Film");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genre_FilmGenre", Storage="_Genre", ThisKey="id_genre", OtherKey="id", IsForeignKey=true)]
 		public Genre Genre
 		{
@@ -879,6 +603,40 @@ namespace DAL
 						this._id_genre = default(int);
 					}
 					this.SendPropertyChanged("Genre");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmGenre", Storage="_Film", ThisKey="id_film", OtherKey="id", IsForeignKey=true)]
+		public Film Film
+		{
+			get
+			{
+				return this._Film.Entity;
+			}
+			set
+			{
+				Film previousValue = this._Film.Entity;
+				if (((previousValue != value) 
+							|| (this._Film.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Film.Entity = null;
+						previousValue.FilmGenres.Remove(this);
+					}
+					this._Film.Entity = value;
+					if ((value != null))
+					{
+						value.FilmGenres.Add(this);
+						this._id_film = value.id;
+					}
+					else
+					{
+						this._id_film = default(int);
+					}
+					this.SendPropertyChanged("Film");
 				}
 			}
 		}
@@ -916,9 +674,9 @@ namespace DAL
 		
 		private int _id_realisateur;
 		
-		private EntityRef<Film> _Film;
-		
 		private EntityRef<Realisateur> _Realisateur;
+		
+		private EntityRef<Film> _Film;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -934,8 +692,8 @@ namespace DAL
 		
 		public FilmRealisateur()
 		{
-			this._Film = default(EntityRef<Film>);
 			this._Realisateur = default(EntityRef<Realisateur>);
+			this._Film = default(EntityRef<Film>);
 			OnCreated();
 		}
 		
@@ -1007,40 +765,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmRealisateur", Storage="_Film", ThisKey="id_film", OtherKey="id", IsForeignKey=true)]
-		public Film Film
-		{
-			get
-			{
-				return this._Film.Entity;
-			}
-			set
-			{
-				Film previousValue = this._Film.Entity;
-				if (((previousValue != value) 
-							|| (this._Film.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Film.Entity = null;
-						previousValue.FilmRealisateurs.Remove(this);
-					}
-					this._Film.Entity = value;
-					if ((value != null))
-					{
-						value.FilmRealisateurs.Add(this);
-						this._id_film = value.id;
-					}
-					else
-					{
-						this._id_film = default(int);
-					}
-					this.SendPropertyChanged("Film");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Realisateur_FilmRealisateur", Storage="_Realisateur", ThisKey="id_realisateur", OtherKey="id", IsForeignKey=true)]
 		public Realisateur Realisateur
 		{
@@ -1071,6 +795,40 @@ namespace DAL
 						this._id_realisateur = default(int);
 					}
 					this.SendPropertyChanged("Realisateur");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmRealisateur", Storage="_Film", ThisKey="id_film", OtherKey="id", IsForeignKey=true)]
+		public Film Film
+		{
+			get
+			{
+				return this._Film.Entity;
+			}
+			set
+			{
+				Film previousValue = this._Film.Entity;
+				if (((previousValue != value) 
+							|| (this._Film.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Film.Entity = null;
+						previousValue.FilmRealisateurs.Remove(this);
+					}
+					this._Film.Entity = value;
+					if ((value != null))
+					{
+						value.FilmRealisateurs.Add(this);
+						this._id_film = value.id;
+					}
+					else
+					{
+						this._id_film = default(int);
+					}
+					this.SendPropertyChanged("Film");
 				}
 			}
 		}
@@ -1321,6 +1079,272 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.Realisateur = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Film")]
+	public partial class Film : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _title;
+		
+		private string _original_title;
+		
+		private System.Nullable<int> _runtime;
+		
+		private string _posterpath;
+		
+		private string _trailer;
+		
+		private EntitySet<FilmActor> _FilmActors;
+		
+		private EntitySet<FilmGenre> _FilmGenres;
+		
+		private EntitySet<FilmRealisateur> _FilmRealisateurs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OntitleChanging(string value);
+    partial void OntitleChanged();
+    partial void Onoriginal_titleChanging(string value);
+    partial void Onoriginal_titleChanged();
+    partial void OnruntimeChanging(System.Nullable<int> value);
+    partial void OnruntimeChanged();
+    partial void OnposterpathChanging(string value);
+    partial void OnposterpathChanged();
+    partial void OntrailerChanging(string value);
+    partial void OntrailerChanged();
+    #endregion
+		
+		public Film()
+		{
+			this._FilmActors = new EntitySet<FilmActor>(new Action<FilmActor>(this.attach_FilmActors), new Action<FilmActor>(this.detach_FilmActors));
+			this._FilmGenres = new EntitySet<FilmGenre>(new Action<FilmGenre>(this.attach_FilmGenres), new Action<FilmGenre>(this.detach_FilmGenres));
+			this._FilmRealisateurs = new EntitySet<FilmRealisateur>(new Action<FilmRealisateur>(this.attach_FilmRealisateurs), new Action<FilmRealisateur>(this.detach_FilmRealisateurs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string title
+		{
+			get
+			{
+				return this._title;
+			}
+			set
+			{
+				if ((this._title != value))
+				{
+					this.OntitleChanging(value);
+					this.SendPropertyChanging();
+					this._title = value;
+					this.SendPropertyChanged("title");
+					this.OntitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_original_title", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string original_title
+		{
+			get
+			{
+				return this._original_title;
+			}
+			set
+			{
+				if ((this._original_title != value))
+				{
+					this.Onoriginal_titleChanging(value);
+					this.SendPropertyChanging();
+					this._original_title = value;
+					this.SendPropertyChanged("original_title");
+					this.Onoriginal_titleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_runtime", DbType="Int")]
+		public System.Nullable<int> runtime
+		{
+			get
+			{
+				return this._runtime;
+			}
+			set
+			{
+				if ((this._runtime != value))
+				{
+					this.OnruntimeChanging(value);
+					this.SendPropertyChanging();
+					this._runtime = value;
+					this.SendPropertyChanged("runtime");
+					this.OnruntimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_posterpath", DbType="VarChar(100)")]
+		public string posterpath
+		{
+			get
+			{
+				return this._posterpath;
+			}
+			set
+			{
+				if ((this._posterpath != value))
+				{
+					this.OnposterpathChanging(value);
+					this.SendPropertyChanging();
+					this._posterpath = value;
+					this.SendPropertyChanged("posterpath");
+					this.OnposterpathChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_trailer", DbType="VarChar(100)")]
+		public string trailer
+		{
+			get
+			{
+				return this._trailer;
+			}
+			set
+			{
+				if ((this._trailer != value))
+				{
+					this.OntrailerChanging(value);
+					this.SendPropertyChanging();
+					this._trailer = value;
+					this.SendPropertyChanged("trailer");
+					this.OntrailerChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmActor", Storage="_FilmActors", ThisKey="id", OtherKey="id_film")]
+		public EntitySet<FilmActor> FilmActors
+		{
+			get
+			{
+				return this._FilmActors;
+			}
+			set
+			{
+				this._FilmActors.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmGenre", Storage="_FilmGenres", ThisKey="id", OtherKey="id_film")]
+		public EntitySet<FilmGenre> FilmGenres
+		{
+			get
+			{
+				return this._FilmGenres;
+			}
+			set
+			{
+				this._FilmGenres.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Film_FilmRealisateur", Storage="_FilmRealisateurs", ThisKey="id", OtherKey="id_film")]
+		public EntitySet<FilmRealisateur> FilmRealisateurs
+		{
+			get
+			{
+				return this._FilmRealisateurs;
+			}
+			set
+			{
+				this._FilmRealisateurs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_FilmActors(FilmActor entity)
+		{
+			this.SendPropertyChanging();
+			entity.Film = this;
+		}
+		
+		private void detach_FilmActors(FilmActor entity)
+		{
+			this.SendPropertyChanging();
+			entity.Film = null;
+		}
+		
+		private void attach_FilmGenres(FilmGenre entity)
+		{
+			this.SendPropertyChanging();
+			entity.Film = this;
+		}
+		
+		private void detach_FilmGenres(FilmGenre entity)
+		{
+			this.SendPropertyChanging();
+			entity.Film = null;
+		}
+		
+		private void attach_FilmRealisateurs(FilmRealisateur entity)
+		{
+			this.SendPropertyChanging();
+			entity.Film = this;
+		}
+		
+		private void detach_FilmRealisateurs(FilmRealisateur entity)
+		{
+			this.SendPropertyChanging();
+			entity.Film = null;
 		}
 	}
 }

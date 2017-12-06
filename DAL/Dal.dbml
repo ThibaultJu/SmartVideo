@@ -1,23 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FilmDB" Class="DalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-NCF3L4S;Initial Catalog=FilmDB;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="FilmDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VINCE-PC;Initial Catalog=FilmDB;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="FilmDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Actor" Member="Actors">
     <Type Name="Actor">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="character" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
       <Association Name="Actor_FilmActor" Member="FilmActors" ThisKey="id" OtherKey="id_actor" Type="FilmActor" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Film" Member="Films">
-    <Type Name="Film">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="title" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="original_title" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="runtime" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="posterpath" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Film_FilmActor" Member="FilmActors" ThisKey="id" OtherKey="id_film" Type="FilmActor" />
-      <Association Name="Film_FilmGenre" Member="FilmGenres" ThisKey="id" OtherKey="id_film" Type="FilmGenre" />
-      <Association Name="Film_FilmRealisateur" Member="FilmRealisateurs" ThisKey="id" OtherKey="id_film" Type="FilmRealisateur" />
     </Type>
   </Table>
   <Table Name="dbo.FilmActor" Member="FilmActors">
@@ -34,8 +22,8 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="id_film" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_genre" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Film_FilmGenre" Member="Film" ThisKey="id_film" OtherKey="id" Type="Film" IsForeignKey="true" />
       <Association Name="Genre_FilmGenre" Member="Genre" ThisKey="id_genre" OtherKey="id" Type="Genre" IsForeignKey="true" />
+      <Association Name="Film_FilmGenre" Member="Film" ThisKey="id_film" OtherKey="id" Type="Film" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.FilmRealisateur" Member="FilmRealisateurs">
@@ -43,8 +31,8 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="id_film" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_realisateur" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Film_FilmRealisateur" Member="Film" ThisKey="id_film" OtherKey="id" Type="Film" IsForeignKey="true" />
       <Association Name="Realisateur_FilmRealisateur" Member="Realisateur" ThisKey="id_realisateur" OtherKey="id" Type="Realisateur" IsForeignKey="true" />
+      <Association Name="Film_FilmRealisateur" Member="Film" ThisKey="id_film" OtherKey="id" Type="Film" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Genre" Member="Genres">
@@ -59,6 +47,19 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Realisateur_FilmRealisateur" Member="FilmRealisateurs" ThisKey="id" OtherKey="id_realisateur" Type="FilmRealisateur" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Film" Member="Films">
+    <Type Name="Film">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="original_title" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="runtime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="posterpath" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="trailer" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Film_FilmActor" Member="FilmActors" ThisKey="id" OtherKey="id_film" Type="FilmActor" />
+      <Association Name="Film_FilmGenre" Member="FilmGenres" ThisKey="id" OtherKey="id_film" Type="FilmGenre" />
+      <Association Name="Film_FilmRealisateur" Member="FilmRealisateurs" ThisKey="id" OtherKey="id_film" Type="FilmRealisateur" />
     </Type>
   </Table>
 </Database>
