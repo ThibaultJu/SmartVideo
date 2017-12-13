@@ -62,7 +62,7 @@ namespace DAL
 
         public List<GenreDTO> GetGenreWithId(int id)
         {
-            var query = "SELECT Genre.* FROM FilmGenre INNER JOIN Genre ON FilmGenre.id_genre = Genre.id WHERE FilmGenre.id_film = " + id + ";";
+            var query = "SELECT Distinct Genre.* FROM FilmGenre INNER JOIN Genre ON FilmGenre.id_genre = Genre.id WHERE FilmGenre.id_film = " + id + ";";
             try
             {
                 var list = _context.ExecuteQuery<GenreDTO>(query).Select(g => new GenreDTO
@@ -81,7 +81,7 @@ namespace DAL
 
         public List<ActeurDTO> GetActorWithId(int id)
         {
-            var query = "SELECT Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
+            var query = "SELECT Distinct Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
             try
             {
                 var list = _context.ExecuteQuery<ActeurDTO>(query).Select(a => new ActeurDTO
@@ -101,7 +101,7 @@ namespace DAL
 
         public List<RealisateurDTO> GetDirectorWithId(int id)
         {
-            var query = "SELECT Realisateur.* FROM FilmRealisateur INNER JOIN Realisateur ON FilmRealisateur.id_realisateur = Realisateur.id WHERE FilmRealisateur.id_film = " + id + ";";
+            var query = "SELECT Distinct Realisateur.* FROM FilmRealisateur INNER JOIN Realisateur ON FilmRealisateur.id_realisateur = Realisateur.id WHERE FilmRealisateur.id_film = " + id + ";";
             try
             {
                 var list = _context.ExecuteQuery<RealisateurDTO>(query).Select(g => new RealisateurDTO

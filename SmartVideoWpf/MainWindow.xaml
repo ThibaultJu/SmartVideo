@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartVideoWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1366" MinWidth="1366" MinHeight="768">
+        Title="MainWindow" Height="1080" Width="1920" MinWidth="1920" MinHeight="1080">
     <Grid Width="1926" Height="1080" MinWidth="1920" MinHeight="1080" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-287,-172,-281,-171">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="1829*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGridFilms" HorizontalAlignment="Left" Height="546" Margin="212,184,0,0" VerticalAlignment="Top" Width="1192" RenderTransformOrigin="0.5,0.5" Grid.Column="2" FrozenColumnCount="10" AutoGeneratingColumn="dataGridFilms_AutoGeneratingColumn">
+        <DataGrid x:Name="dataGridFilms" HorizontalAlignment="Left" Height="477" Margin="36,78,0,0" VerticalAlignment="Top" Width="1837" RenderTransformOrigin="0.5,0.5" Grid.Column="1" FrozenColumnCount="10" AutoGeneratingColumn="dataGridFilms_AutoGeneratingColumn" Grid.ColumnSpan="2" SelectionChanged="idSelected">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,6 +22,25 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
+        <ComboBox x:Name="ComboBoxFilmsPages" Grid.Column="2" SelectedIndex="0" HorizontalAlignment="Left" Margin="1670,39,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="SelectFilmNumber">
+            <ComboBoxItem Content="10" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="25" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="50" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Label x:Name="LabelTaillePage" Content="Nombre de films par page" Grid.Column="2" HorizontalAlignment="Left" Margin="1516,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.105,-0.154"/>
+        <Button x:Name="ButtonNextPage" Content="Page suivante" Grid.Column="2" HorizontalAlignment="Left" Margin="1427,41,0,0" VerticalAlignment="Top" Width="84" Click="ClickNextPage"/>
+        <Label x:Name="LabActPage" Content="Page actuelle :" Grid.Column="2" HorizontalAlignment="Left" Margin="1307,37,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonPreviousPage" Content="Page précédente
+                " Grid.Column="2" HorizontalAlignment="Left" Margin="1195,41,0,0" VerticalAlignment="Top" Width="98" Click="ClickPreviousPage"/>
+        <Label x:Name="NumPage" Content="1" Grid.Column="2" HorizontalAlignment="Left" Margin="1393,37,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="DataGridGenre" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="658,668,0,0" VerticalAlignment="Top" Width="310"/>
+        <DataGrid x:Name="DataGridActeur" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="1092,668,0,0" VerticalAlignment="Top" Width="317"/>
+        <DataGrid x:Name="DataGridRealisateur" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="1484,668,0,0" VerticalAlignment="Top" Width="326"/>
+        <Label x:Name="Genres_du_film" Content="Genres du film" Grid.Column="2" HorizontalAlignment="Left" Margin="658,627,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.308"/>
+        <Label x:Name="Label_Acteur_film" Content="Acteurs du film" Grid.Column="2" HorizontalAlignment="Right" Margin="0,627,652,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label_Realisateur_film" Content="Réalisateurs du film
+               " Grid.Column="2" HorizontalAlignment="Left" Margin="1484,619,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="Poster" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="434" Margin="54,600,0,0" VerticalAlignment="Top" Width="613"/>
 
     </Grid>
 </Window>

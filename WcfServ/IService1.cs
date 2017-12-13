@@ -17,7 +17,19 @@ namespace WcfServ
         // TODO: Add your service operations here
         [OperationContract]
         List<FilmDTO> GetFilms(int debut, int nb);
+
+        [OperationContract]
+        List<GenreDTO> GetGenreWithId(int id);
+
+        [OperationContract]
+        List<ActeurDTO> GetActorWithId(int id);
+
+        [OperationContract]
+        List<RealisateurDTO> GetDirectorWithId(int id);
+     
     }
+
+
 
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

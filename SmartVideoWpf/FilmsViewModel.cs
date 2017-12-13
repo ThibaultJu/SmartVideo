@@ -12,21 +12,32 @@ namespace SmartVideoWpf
 {
     class FilmsViewModel
     {
-        private ServiceReference1.FilmDTO _Data;
+        private FilmDTO _Data;
 
         public FilmsViewModel()
         {
 
         }
 
-        public SmartVideoWpf.ServiceReference1.FilmDTO[] GetFilms(int debut, int fin)
+        public FilmDTO[] GetFilms(int debut, int fin)
         {
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            /*VideoWPF.dataGridFilms.ItemsSource = service.GetFilms(debut, fin);
-            //VideoWPF.dataGridFilms.Columns[0].Visibility = Visibility.Hidden;*/
             return(service.GetFilms(debut, fin));
         }
-
-
+        public GenreDTO[] GetGenre(int id)
+        {
+            ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
+            return (service.GetGenreWithId(id));     
+        }
+        public ActeurDTO[] GetActorWithId(int id)
+        {
+            ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
+            return (service.GetActorWithId(id));
+        }
+        public RealisateurDTO[] GetDirectorWithId(int id)
+        {
+            ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
+            return (service.GetDirectorWithId(id));
+        }
     }
 }

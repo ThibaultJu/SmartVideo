@@ -21,7 +21,6 @@ C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\Film
 C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.csprojResolveAssemblyReference.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\FilmDTOLibrary\bin\Debug\FilmDTOLibrary.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\FilmDTOLibrary\bin\Debug\FilmDTOLibrary.pdb
-C:\Users\tibha\Desktop\C#\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.csprojResolveAssemblyReference.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.pdb

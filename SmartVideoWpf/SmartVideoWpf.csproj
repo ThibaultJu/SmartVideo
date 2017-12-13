@@ -103,9 +103,10 @@
     <None Include="Connected Services\ServiceReference1\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\SmartVideoWpf.ServiceReference1.FilmDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    <None Include="Properties\DataSources\FilmDTOLibrary.ActeurDTO.datasource" />
+    <None Include="Properties\DataSources\FilmDTOLibrary.FilmDTO.datasource" />
+    <None Include="Properties\DataSources\FilmDTOLibrary.GenreDTO.datasource" />
+    <None Include="Properties\DataSources\FilmDTOLibrary.RealisateurDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,6 +117,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{C3EDA6FF-E680-408C-8C88-D615DA96A1B4}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilmDTOLibrary\FilmDTOLibrary.csproj">
+      <Project>{4577D9F4-496F-4891-96B0-DA152984BFB6}</Project>
+      <Name>FilmDTOLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
@@ -134,16 +145,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{C3EDA6FF-E680-408C-8C88-D615DA96A1B4}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FilmDTOLibrary\FilmDTOLibrary.csproj">
-      <Project>{4577D9F4-496F-4891-96B0-DA152984BFB6}</Project>
-      <Name>FilmDTOLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

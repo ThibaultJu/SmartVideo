@@ -9,391 +9,35 @@
 //------------------------------------------------------------------------------
 
 namespace SmartVideoWpf.ServiceReference1 {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FilmDTO", Namespace="http://schemas.datacontract.org/2004/07/FilmDTOLibrary")]
-    [System.SerializableAttribute()]
-    public partial class FilmDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SmartVideoWpf.ServiceReference1.ActeurDTO[] ActeurlistField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SmartVideoWpf.ServiceReference1.GenreDTO[] GenrelistField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Original_titleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PosterpathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SmartVideoWpf.ServiceReference1.RealisateurDTO[] RealisateurlistField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int RuntimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TrailerField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SmartVideoWpf.ServiceReference1.ActeurDTO[] Acteurlist {
-            get {
-                return this.ActeurlistField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ActeurlistField, value) != true)) {
-                    this.ActeurlistField = value;
-                    this.RaisePropertyChanged("Acteurlist");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SmartVideoWpf.ServiceReference1.GenreDTO[] Genrelist {
-            get {
-                return this.GenrelistField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GenrelistField, value) != true)) {
-                    this.GenrelistField = value;
-                    this.RaisePropertyChanged("Genrelist");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Original_title {
-            get {
-                return this.Original_titleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Original_titleField, value) != true)) {
-                    this.Original_titleField = value;
-                    this.RaisePropertyChanged("Original_title");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Posterpath {
-            get {
-                return this.PosterpathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PosterpathField, value) != true)) {
-                    this.PosterpathField = value;
-                    this.RaisePropertyChanged("Posterpath");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SmartVideoWpf.ServiceReference1.RealisateurDTO[] Realisateurlist {
-            get {
-                return this.RealisateurlistField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RealisateurlistField, value) != true)) {
-                    this.RealisateurlistField = value;
-                    this.RaisePropertyChanged("Realisateurlist");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Runtime {
-            get {
-                return this.RuntimeField;
-            }
-            set {
-                if ((this.RuntimeField.Equals(value) != true)) {
-                    this.RuntimeField = value;
-                    this.RaisePropertyChanged("Runtime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Title {
-            get {
-                return this.TitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
-                    this.TitleField = value;
-                    this.RaisePropertyChanged("Title");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Trailer {
-            get {
-                return this.TrailerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TrailerField, value) != true)) {
-                    this.TrailerField = value;
-                    this.RaisePropertyChanged("Trailer");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ActeurDTO", Namespace="http://schemas.datacontract.org/2004/07/FilmDTOLibrary")]
-    [System.SerializableAttribute()]
-    public partial class ActeurDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CharacterField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Character {
-            get {
-                return this.CharacterField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CharacterField, value) != true)) {
-                    this.CharacterField = value;
-                    this.RaisePropertyChanged("Character");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GenreDTO", Namespace="http://schemas.datacontract.org/2004/07/FilmDTOLibrary")]
-    [System.SerializableAttribute()]
-    public partial class GenreDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RealisateurDTO", Namespace="http://schemas.datacontract.org/2004/07/FilmDTOLibrary")]
-    [System.SerializableAttribute()]
-    public partial class RealisateurDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilms", ReplyAction="http://tempuri.org/IService1/GetFilmsResponse")]
-        SmartVideoWpf.ServiceReference1.FilmDTO[] GetFilms(int debut, int nb);
+        FilmDTOLibrary.FilmDTO[] GetFilms(int debut, int nb);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilms", ReplyAction="http://tempuri.org/IService1/GetFilmsResponse")]
-        System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.FilmDTO[]> GetFilmsAsync(int debut, int nb);
+        System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmsAsync(int debut, int nb);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreWithId", ReplyAction="http://tempuri.org/IService1/GetGenreWithIdResponse")]
+        FilmDTOLibrary.GenreDTO[] GetGenreWithId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreWithId", ReplyAction="http://tempuri.org/IService1/GetGenreWithIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.GenreDTO[]> GetGenreWithIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorWithId", ReplyAction="http://tempuri.org/IService1/GetActorWithIdResponse")]
+        FilmDTOLibrary.ActeurDTO[] GetActorWithId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorWithId", ReplyAction="http://tempuri.org/IService1/GetActorWithIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorWithIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
+        FilmDTOLibrary.RealisateurDTO[] GetDirectorWithId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorWithIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -423,12 +67,36 @@ namespace SmartVideoWpf.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public SmartVideoWpf.ServiceReference1.FilmDTO[] GetFilms(int debut, int nb) {
+        public FilmDTOLibrary.FilmDTO[] GetFilms(int debut, int nb) {
             return base.Channel.GetFilms(debut, nb);
         }
         
-        public System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.FilmDTO[]> GetFilmsAsync(int debut, int nb) {
+        public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmsAsync(int debut, int nb) {
             return base.Channel.GetFilmsAsync(debut, nb);
+        }
+        
+        public FilmDTOLibrary.GenreDTO[] GetGenreWithId(int id) {
+            return base.Channel.GetGenreWithId(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.GenreDTO[]> GetGenreWithIdAsync(int id) {
+            return base.Channel.GetGenreWithIdAsync(id);
+        }
+        
+        public FilmDTOLibrary.ActeurDTO[] GetActorWithId(int id) {
+            return base.Channel.GetActorWithId(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorWithIdAsync(int id) {
+            return base.Channel.GetActorWithIdAsync(id);
+        }
+        
+        public FilmDTOLibrary.RealisateurDTO[] GetDirectorWithId(int id) {
+            return base.Channel.GetDirectorWithId(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorWithIdAsync(int id) {
+            return base.Channel.GetDirectorWithIdAsync(id);
         }
     }
 }
