@@ -26,7 +26,11 @@ namespace WcfServ
 
         [OperationContract]
         List<RealisateurDTO> GetDirectorWithId(int id);
-     
+
+        [OperationContract]
+        List<FilmDTO> GetFilmWithId(int id);
+
+
     }
 
 

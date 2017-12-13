@@ -31,6 +31,12 @@
   <wsdl:message name="IService1_GetDirectorWithId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDirectorWithIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetFilmWithId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmWithId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFilmWithId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmWithIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetFilms">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilms" message="tns:IService1_GetFilms_InputMessage" />
@@ -47,6 +53,10 @@
     <wsdl:operation name="GetDirectorWithId">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDirectorWithId" message="tns:IService1_GetDirectorWithId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDirectorWithIdResponse" message="tns:IService1_GetDirectorWithId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmWithId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilmWithId" message="tns:IService1_GetFilmWithId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFilmWithIdResponse" message="tns:IService1_GetFilmWithId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -80,6 +90,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetDirectorWithId">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDirectorWithId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmWithId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFilmWithId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

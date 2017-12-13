@@ -63,7 +63,7 @@ namespace SmartVideoWpf
                 case "ExtensionData":
                     e.Cancel = true;
                     break;
-                case "":
+                case "Posterpath":
                     e.Cancel = true;
                     break;
             }
@@ -142,48 +142,25 @@ namespace SmartVideoWpf
                 DataGridGenre.ItemsSource = fVM.GetGenre(int.Parse(ID));
                 DataGridActeur.ItemsSource = fVM.GetActorWithId(int.Parse(ID));
                 DataGridRealisateur.ItemsSource = fVM.GetDirectorWithId(int.Parse(ID));
-                loadImage((dataGridFilms.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text);
-                //Poster.Source = "http://image.tmdb.org/t/p/w185" + (dataGridFilms.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text);
+                FilmDTO film = new FilmDTO();
+                film = fVM.GetFilmswithId(int.Parse(ID)).First();
+                Poster.Source = fVM.loadImage(film.Posterpath);
             }
 
         }
-        public void loadImage(string path)
-        {
-            var image = new BitmapImage();
-            int BytesToRead = 100;
 
+        private void BuTrailer_Click(object sender, RoutedEventArgs e)
+        {
             try
             {
-                ServicePointManager.DefaultConnectionLimit = 10;
-                Console.WriteLine("http://image.tmdb.org/t/p/w185" + path);
-                WebRequest request = WebRequest.Create("http://image.tmdb.org/t/p/w185" + path);
-                request.Timeout = 1000;
-                Console.WriteLine(request.GetResponse());
-                WebResponse response = request.GetResponse();
-                Stream responseStream = response.GetResponseStream();
-                BinaryReader reader = new BinaryReader(responseStream);
-                MemoryStream memoryStream = new MemoryStream();
-
-                byte[] bytebuffer = new byte[BytesToRead];
-                int bytesRead = reader.Read(bytebuffer, 0, BytesToRead);
-
-                while (bytesRead > 0)
-                {
-                    memoryStream.Write(bytebuffer, 0, bytesRead);
-                    bytesRead = reader.Read(bytebuffer, 0, BytesToRead);
-                }
-                
-                image.BeginInit();
-                memoryStream.Seek(0, SeekOrigin.Begin);
-
-                image.StreamSource = memoryStream;
-                image.EndInit();
-                Poster.Source = image;
+                FilmsViewModel fVM = new FilmsViewModel();
+                object item = dataGridFilms.SelectedItem;
+                string ID = (dataGridFilms.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+                FilmDTO film = new FilmDTO();
+                film = fVM.GetFilmswithId(int.Parse(ID)).First();
+                System.Diagnostics.Process.Start(film.Trailer);
             }
-            catch (WebException e)
-            {
-                System.Windows.MessageBox.Show(e.Message);
-            }
+            catch { }
         }
     }
 }

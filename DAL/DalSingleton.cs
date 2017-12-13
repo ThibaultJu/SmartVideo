@@ -118,5 +118,28 @@ namespace DAL
                 return new List<RealisateurDTO>();
             }
         }
+        public List<FilmDTO> GetFilmWithId(int id)
+        {
+            var query = "SELECT * FROM Film WHERE Film.Id = " + id + ";";
+            try
+            {
+                var list = _context.ExecuteQuery<FilmDTO>(query).Select(f => new FilmDTO
+                {
+                    Id = f.Id,
+                    Title = f.Title,
+                    Original_title = f.Original_title,
+                    Runtime = f.Runtime,
+                    Posterpath = f.Posterpath,
+                    Trailer = f.Trailer
+
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " erreur d'affichage des résultats");
+                return new List<FilmDTO>();
+            }
+        }
     }
 }

@@ -31,6 +31,10 @@ namespace BLL
         {
             return DalSingleton.Singleton().GetDirectorWithId(id);
         }
+        public List<FilmDTO> GetFilmWithId(int id)
+        {
+            return DalSingleton.Singleton().GetFilmWithId(id);
+        }
 
     }
 }

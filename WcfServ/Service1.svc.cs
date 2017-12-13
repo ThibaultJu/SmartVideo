@@ -36,5 +36,9 @@ namespace WcfServ
         {
             return Bll.GetDirectorWithId(id);
         }
+        public List<FilmDTO> GetFilmWithId(int id)
+        {
+            return Bll.GetFilmWithId(id);
+        }
     }
 }

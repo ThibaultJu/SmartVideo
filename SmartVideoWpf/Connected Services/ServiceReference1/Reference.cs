@@ -38,6 +38,12 @@ namespace SmartVideoWpf.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
         System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorWithIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
+        FilmDTOLibrary.FilmDTO[] GetFilmWithId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmWithIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace SmartVideoWpf.ServiceReference1 {
         
         public System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorWithIdAsync(int id) {
             return base.Channel.GetDirectorWithIdAsync(id);
+        }
+        
+        public FilmDTOLibrary.FilmDTO[] GetFilmWithId(int id) {
+            return base.Channel.GetFilmWithId(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmWithIdAsync(int id) {
+            return base.Channel.GetFilmWithIdAsync(id);
         }
     }
 }
