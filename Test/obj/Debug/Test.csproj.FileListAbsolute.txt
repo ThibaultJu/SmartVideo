@@ -6,7 +6,6 @@ C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\bin\Debug\FilmDTOLibrary
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\bin\Debug\BLL.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\bin\Debug\FilmDTOLibrary.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\bin\Debug\DAL.pdb
-C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\obj\Debug\Test.Form1.resources
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\obj\Debug\Test.Properties.Resources.resources
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\obj\Debug\Test.csproj.GenerateResource.Cache

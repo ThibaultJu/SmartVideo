@@ -1,6 +1,6 @@
 ﻿namespace MyWindowsService
 {
-    partial class Service1Install
+    partial class MyInstaller
     {
         /// <summary>
         /// Required designer variable.

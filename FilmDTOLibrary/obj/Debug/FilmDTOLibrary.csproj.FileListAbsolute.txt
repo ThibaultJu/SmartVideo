@@ -15,7 +15,7 @@ C:\Users\vhoog\Google Drive\Troisième année\Programmation .Net\Laboratoire\Dos
 C:\Users\vhoog\Google Drive\Troisième année\Programmation .Net\Laboratoire\Dossier 1\Lecture DB Film 2.0\Lecture DB Film\ImportFilmToDB\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\bin\Debug\FilmDTOLibrary.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\bin\Debug\FilmDTOLibrary.pdb
-C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.csprojResolveAssemblyReference.cache
 C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.csproj.CoreCompileInputs.cache
 C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.pdb
+C:\Users\vhoog\Documents\Projets école\SmartVideo\FilmDTOLibrary\obj\Debug\FilmDTOLibrary.csprojResolveAssemblyReference.cache

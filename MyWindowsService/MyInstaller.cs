@@ -28,7 +28,7 @@ namespace MyWindowsService
             // Service will have Start Type of Manual
             serviceInstaller.StartType = ServiceStartMode.Automatic;
 
-            serviceInstaller.ServiceName = "ServiceWCFWindows";
+            serviceInstaller.ServiceName = "MyServiceWCFWindows";
 
             Installers.Add(serviceInstaller);
             Installers.Add(processInstaller);
