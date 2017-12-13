@@ -9,3 +9,14 @@ C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\obj\Debug\BLL.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\obj\Debug\BLL.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\DAL.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\BLL\bin\Debug\DAL.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\BLL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\BLL.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\DAL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\FilmDTOLibrary.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\DAL.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\DAL.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\obj\Debug\BLL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\BLL\obj\Debug\BLL.pdb

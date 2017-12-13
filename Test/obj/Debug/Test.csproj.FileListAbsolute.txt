@@ -14,3 +14,19 @@ C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\obj\Debug\Test.exe
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\obj\Debug\Test.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\bin\Debug\DAL.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\Test\bin\Debug\DAL.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\Test.exe.config
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\Test.exe
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\Test.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\BLL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\DAL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\FilmDTOLibrary.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\BLL.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\DAL.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\DAL.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.Form1.resources
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.exe
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.pdb

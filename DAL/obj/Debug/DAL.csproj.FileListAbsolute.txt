@@ -9,3 +9,14 @@ C:\Users\vhoog\Documents\Projets école\SmartVideo\DAL\bin\Debug\DAL.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\DAL\bin\Debug\FilmDTOLibrary.dll
 C:\Users\vhoog\Documents\Projets école\SmartVideo\DAL\bin\Debug\FilmDTOLibrary.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\DAL\obj\Debug\DAL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\bin\Debug\DAL.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\bin\Debug\DAL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\bin\Debug\DAL.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\bin\Debug\FilmDTOLibrary.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\obj\Debug\DAL.Properties.Resources.resources
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\obj\Debug\DAL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DAL\obj\Debug\DAL.pdb

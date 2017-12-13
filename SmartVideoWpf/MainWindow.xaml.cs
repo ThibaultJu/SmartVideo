@@ -27,14 +27,36 @@ namespace SmartVideoWpf
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
             this.WindowState = WindowState.Maximized;
 
-            ServiceReference1.FilmDTO monFilm = new ServiceReference1.FilmDTO();
+            /*ServiceReference1.FilmDTO monFilm = new ServiceReference1.FilmDTO();
 
-            monFilm = service.GetFilms(1, 1).First();
-
-            this.dataGridFilms.DataContext = new FilmsViewModel(monFilm);
+            monFilm = service.GetFilms(1, 1).First();*/
+            FilmsViewModel fVM = new FilmsViewModel();
+            dataGridFilms.ItemsSource = fVM.GetFilms(1,50);
+            //dataGridFilms.Columns[0].Visibility = Visibility.Hidden;
                 //service.GetFilms(1, 50);
+        }
 
+        private void dataGridFilms_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
 
+            switch ((string)e.Column.Header)
+            {
+                case "Acteurlist":
+                    e.Cancel = true;
+                    break;
+                case "Genrelist":
+                    e.Cancel = true;
+                    break;
+                case "Realisateurlist":
+                    e.Cancel = true;
+                    break;
+                case "ExtensionData":
+                    e.Cancel = true;
+                    break;
+                case "":
+                    e.Cancel = true;
+                    break;
+            }
         }
     }
 }

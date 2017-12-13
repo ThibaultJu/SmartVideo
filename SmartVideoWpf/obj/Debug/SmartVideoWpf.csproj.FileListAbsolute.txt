@@ -18,3 +18,23 @@ C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartVideoWpf\bin\Debug\FilmD
 C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartVideoWpf\bin\Debug\DAL.pdb
 C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartVideoWpf\bin\Debug\DAL.dll.config
 C:\Users\vhoog\Documents\Projets école\SmartVideo\SmartVideoWpf\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\SmartVideoWpf.exe.config
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\SmartVideoWpf.exe
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\SmartVideoWpf.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\DAL.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\FilmDTOLibrary.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\DAL.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\DAL.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\FilmDTOLibrary.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.csprojResolveAssemblyReference.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\MainWindow.g.cs
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\App.g.cs
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf_MarkupCompile.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf_MarkupCompile.lref
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\MainWindow.baml
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.g.resources
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.Properties.Resources.resources
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.csproj.GenerateResource.Cache
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.csproj.CoreCompileInputs.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.exe
+C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.pdb

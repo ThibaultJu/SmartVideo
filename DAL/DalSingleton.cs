@@ -15,7 +15,7 @@ namespace DAL
 
         public static DalSingleton Singleton()
         {
-            return _instance ?? (_instance = new DalSingleton("VINCE-PC", "FilmDB"));
+            return _instance ?? (_instance = new DalSingleton("PC-THIBAULT", "FilmDB"));
         }
 
         public DalSingleton(String servername, String DalSingletonname)
