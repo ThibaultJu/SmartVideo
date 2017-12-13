@@ -15,10 +15,14 @@ namespace Test
     {
         public Form1()
         {
-            BLLClass filmBLL;
-            filmBLL = new BLLClass();
             InitializeComponent();
-            dataGridView1.DataSource = filmBLL.GetActorWithId(122);
+            /*BLLClass filmBLL;
+            filmBLL = new BLLClass();
+            dataGridView1.DataSource = filmBLL.GetActorWithId(122);*/
+
+            ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
+
+            dataGridView1.DataSource = service.GetFilms(1, 10);
 
            // ServiceReference1.Service1Client = new ServiceReference1.Service1Client();
 

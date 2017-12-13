@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWindowsService", "MyWindo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServ", "WcfServ\WcfServ.csproj", "{8F55C740-A8AB-4357-BB9F-C11232583447}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartVideoWpf", "SmartVideoWpf\SmartVideoWpf.csproj", "{9060D0AC-871C-4987-B140-DB68DAFFF361}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F55C740-A8AB-4357-BB9F-C11232583447} = {8F55C740-A8AB-4357-BB9F-C11232583447}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +56,10 @@ Global
 		{8F55C740-A8AB-4357-BB9F-C11232583447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F55C740-A8AB-4357-BB9F-C11232583447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F55C740-A8AB-4357-BB9F-C11232583447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9060D0AC-871C-4987-B140-DB68DAFFF361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9060D0AC-871C-4987-B140-DB68DAFFF361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9060D0AC-871C-4987-B140-DB68DAFFF361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9060D0AC-871C-4987-B140-DB68DAFFF361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

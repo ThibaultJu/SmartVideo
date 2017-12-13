@@ -27,7 +27,7 @@ namespace MyWindowsService
                 service1Host.Close();
             }
 
-            service1Host = new ServiceHost(typeof(Service1), new Uri("http://localhost:62415/WcfServ/Service1/"));
+            service1Host = new ServiceHost(typeof(Service1), new Uri("http://localhost:62415/"));
             service1Host.AddDefaultEndpoints();
 
             service1Host.Open();
