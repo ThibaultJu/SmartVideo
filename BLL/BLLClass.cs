@@ -35,6 +35,10 @@ namespace BLL
         {
             return DalSingleton.Singleton().GetFilmWithId(id);
         }
+        public void SetTrailer(int id, string trailer)
+        {
+            DalSingleton.Singleton().SetTrailer(id, trailer);
+        }
 
     }
 }

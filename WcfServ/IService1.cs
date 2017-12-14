@@ -30,6 +30,8 @@ namespace WcfServ
         [OperationContract]
         List<FilmDTO> GetFilmWithId(int id);
 
+        [OperationContract]
+        void SetTrailer(int id, String trailer);
 
     }
 

@@ -12,7 +12,7 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="1829*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGridFilms" HorizontalAlignment="Left" Height="477" Margin="36,78,0,0" VerticalAlignment="Top" Width="1837" RenderTransformOrigin="0.5,0.5" Grid.Column="1" FrozenColumnCount="10" AutoGeneratingColumn="dataGridFilms_AutoGeneratingColumn" Grid.ColumnSpan="2" SelectionChanged="idSelected">
+        <DataGrid x:Name="dataGridFilms" HorizontalAlignment="Left" Height="477" Margin="36,78,0,0" VerticalAlignment="Top" Width="1837" RenderTransformOrigin="0.5,0.5" Grid.Column="1" FrozenColumnCount="10" AutoGeneratingColumn="dataGridFilms_AutoGeneratingColumn" Grid.ColumnSpan="2" SelectionChanged="idSelected" CellEditEnding="TrailerUpdate">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,9 +33,9 @@
         <Button x:Name="ButtonPreviousPage" Content="Page précédente
                 " Grid.Column="2" HorizontalAlignment="Left" Margin="1195,41,0,0" VerticalAlignment="Top" Width="98" Click="ClickPreviousPage"/>
         <Label x:Name="NumPage" Content="1" Grid.Column="2" HorizontalAlignment="Left" Margin="1393,37,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="DataGridGenre" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="658,668,0,0" VerticalAlignment="Top" Width="310"/>
-        <DataGrid x:Name="DataGridActeur" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="1036,668,0,0" VerticalAlignment="Top" Width="391"/>
-        <DataGrid x:Name="DataGridRealisateur" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="1484,668,0,0" VerticalAlignment="Top" Width="326"/>
+        <DataGrid x:Name="DataGridGenre" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="658,668,0,0" VerticalAlignment="Top" Width="310" IsReadOnly="True"/>
+        <DataGrid x:Name="DataGridActeur" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="1036,668,0,0" VerticalAlignment="Top" Width="391" IsReadOnly="True"/>
+        <DataGrid x:Name="DataGridRealisateur" Grid.Column="2" HorizontalAlignment="Left" Height="366" Margin="1484,668,0,0" VerticalAlignment="Top" Width="326" IsReadOnly="True"/>
         <Label x:Name="Genres_du_film" Content="Genres du film" Grid.Column="2" HorizontalAlignment="Left" Margin="658,627,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.308"/>
         <Label x:Name="Label_Acteur_film" Content="Acteurs du film" Grid.Column="2" HorizontalAlignment="Right" Margin="0,627,652,0" VerticalAlignment="Top"/>
         <Label x:Name="Label_Realisateur_film" Content="Réalisateurs du film

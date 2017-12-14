@@ -40,5 +40,9 @@ namespace WcfServ
         {
             return Bll.GetFilmWithId(id);
         }
+        public void SetTrailer(int id, String trailer)
+        {
+            Bll.SetTrailer(id, trailer);
+        }
     }
 }

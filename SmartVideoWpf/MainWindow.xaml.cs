@@ -26,9 +26,12 @@ namespace SmartVideoWpf
     {
         private int indexFilm;
         private Boolean started = false;
+        private FilmsViewModel view;
+
         public MainWindow()
         {
             InitializeComponent();
+            view = new FilmsViewModel();
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
             this.WindowState = WindowState.Maximized;
             indexFilm = 0;
@@ -66,9 +69,20 @@ namespace SmartVideoWpf
                 case "Posterpath":
                     e.Cancel = true;
                     break;
+                case "Trailer":
+                    e.Column.IsReadOnly = false;
+                    break;
+                case "Title":
+                    e.Column.IsReadOnly = true;
+                    break;
+                case "Original_title":
+                    e.Column.IsReadOnly = true;
+                    break;
+                case "Runtime":
+                    e.Column.IsReadOnly = true;
+                    break;
             }
         }
-
 
         private void SelectFilmNumber(object sender, EventArgs e)
         {
@@ -162,5 +176,18 @@ namespace SmartVideoWpf
             }
             catch { }
         }
+
+        private void TrailerUpdate(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            FilmsViewModel fVM = new FilmsViewModel();
+            object item = dataGridFilms.SelectedItem;
+            string ID = (dataGridFilms.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            string str;
+            TextBox t = e.EditingElement as TextBox;
+            str = t.Text.ToString();
+            Console.WriteLine(str);
+            fVM.updateTrailer(int.Parse(ID), str);
+        }
+
     }
 }

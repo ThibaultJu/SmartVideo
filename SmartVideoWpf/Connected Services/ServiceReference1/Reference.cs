@@ -44,6 +44,12 @@ namespace SmartVideoWpf.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
         System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmWithIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetTrailer", ReplyAction="http://tempuri.org/IService1/SetTrailerResponse")]
+        void SetTrailer(int id, string trailer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetTrailer", ReplyAction="http://tempuri.org/IService1/SetTrailerResponse")]
+        System.Threading.Tasks.Task SetTrailerAsync(int id, string trailer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace SmartVideoWpf.ServiceReference1 {
         
         public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmWithIdAsync(int id) {
             return base.Channel.GetFilmWithIdAsync(id);
+        }
+        
+        public void SetTrailer(int id, string trailer) {
+            base.Channel.SetTrailer(id, trailer);
+        }
+        
+        public System.Threading.Tasks.Task SetTrailerAsync(int id, string trailer) {
+            return base.Channel.SetTrailerAsync(id, trailer);
         }
     }
 }
