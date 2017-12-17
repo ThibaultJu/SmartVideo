@@ -1,0 +1,9 @@
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\bin\Debug\DALSmartVideoDB.dll.config
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\bin\Debug\DALSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\bin\Debug\DALSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\bin\Debug\SmartVideoDBDTO.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\bin\Debug\SmartVideoDBDTO.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\obj\Debug\DALSmartVideoDB.csprojResolveAssemblyReference.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\obj\Debug\DALSmartVideoDB.csproj.CoreCompileInputs.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\obj\Debug\DALSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\DALSmartVideoDB\obj\Debug\DALSmartVideoDB.pdb

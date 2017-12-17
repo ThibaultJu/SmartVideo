@@ -75,6 +75,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Properties\DataSources\FilmDTOLibrary.ActeurDTO.datasource" />
+    <Content Include="Properties\DataSources\FilmDTOLibrary.FilmDTO.datasource" />
+    <Content Include="Properties\DataSources\FilmDTOLibrary.GenreDTO.datasource" />
+    <Content Include="Properties\DataSources\FilmDTOLibrary.RealisateurDTO.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,6 +87,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLLSmartVideoDB\BLLSmartVideoDB.csproj">
+      <Project>{3e7e6970-988c-4701-b9a9-145e31ec6549}</Project>
+      <Name>BLLSmartVideoDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{0FA6E1D0-772D-48FF-8644-82655ED908AE}</Project>
       <Name>BLL</Name>
@@ -90,6 +98,10 @@
     <ProjectReference Include="..\FilmDTOLibrary\FilmDTOLibrary.csproj">
       <Project>{4577D9F4-496F-4891-96B0-DA152984BFB6}</Project>
       <Name>FilmDTOLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartVideoDBDTO\SmartVideoDBDTO.csproj">
+      <Project>{58145f3a-691d-427c-a4c4-bf7b0f820001}</Project>
+      <Name>SmartVideoDBDTO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

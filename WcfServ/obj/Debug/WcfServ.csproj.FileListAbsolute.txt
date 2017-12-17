@@ -26,3 +26,10 @@ C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\obj\Debug\WcfServ.csprojResolveAsse
 C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\obj\Debug\WcfServ.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\obj\Debug\WcfServ.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\obj\Debug\WcfServ.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\BLLSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\SmartVideoDBDTO.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\DALSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\BLLSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\SmartVideoDBDTO.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\DALSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WcfServ\bin\DALSmartVideoDB.dll.config

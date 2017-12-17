@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SmartVideoDB" Class="DalSmartVideoDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PC-THIBAULT;Initial Catalog=SmartVideoDB;Integrated Security=True" SettingsObjectName="DALSmartVideoDB.Properties.Settings" SettingsPropertyName="SmartVideoDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Hits" Member="Hits">
+    <Type Name="Hit">
+      <Column Name="idHits" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="nbRecherche" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idRequete" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Hit_Statistique" Member="Statistiques" ThisKey="idHits" OtherKey="idHits" Type="Statistique" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Statistiques" Member="Statistiques">
+    <Type Name="Statistique">
+      <Column Name="idStatistiques" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idHits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="numClassement" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Hit_Statistique" Member="Hit" ThisKey="idHits" OtherKey="idHits" Type="Hit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utilisateurs" Member="Utilisateurs">
+    <Type Name="Utilisateur">
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pseudo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Carte" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Utilisateur_LocationsFilm" Member="LocationsFilms" ThisKey="Email" OtherKey="Utilisateur" Type="LocationsFilm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationsFilms" Member="LocationsFilms">
+    <Type Name="LocationsFilm">
+      <Column Name="idLocationsFilm" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idFilm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Utilisateur" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateDébut" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DateFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Utilisateur_LocationsFilm" Member="Utilisateur1" ThisKey="Utilisateur" OtherKey="Email" Type="Utilisateur" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

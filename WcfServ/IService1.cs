@@ -33,6 +33,9 @@ namespace WcfServ
         [OperationContract]
         void SetTrailer(int id, String trailer);
 
+        [OperationContract]
+        String Login(String E,String pass);
+
     }
 
 

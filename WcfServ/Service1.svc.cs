@@ -1,4 +1,5 @@
 ﻿using BLL;
+using BLLSmartVideoDB;
 using FilmDTOLibrary;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace WcfServ
     public class Service1 : IService1
     {
         BLLClass Bll = new BLLClass();
+        BLLSmartVideo BllSmart = new BLLSmartVideo();
 
         public List<FilmDTO> GetFilms(int debut, int nb)
         {
@@ -43,6 +45,10 @@ namespace WcfServ
         public void SetTrailer(int id, String trailer)
         {
             Bll.SetTrailer(id, trailer);
+        }
+        public String Login(string E, string pass)
+        {
+            return BllSmart.Login(E, pass);
         }
     }
 }
