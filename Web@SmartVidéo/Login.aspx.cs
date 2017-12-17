@@ -12,10 +12,11 @@ namespace Web_SmartVidéo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Log"] != null)
+            if (Session["Log"] != null && Session["LogOK"] != null)
             {
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
                 link.InnerText = (String)Session["Log"];
+                link.HRef = (String)Session["LogOK"];
             }
         }
 
@@ -27,9 +28,10 @@ namespace Web_SmartVidéo
             {
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
                 link.InnerText = user;
-                link.InnerHtml = "~/Login";
+                link.HRef = "~/InfoUser";
                 Session["Log"]= user;
-                //link.Visible = false;
+                Session["LogOK"] = "~/InfoUser";
+                Session["Email"] = TextBox1.Text;
                 Server.Transfer("Default.aspx", true);
             }
         }

@@ -12,10 +12,11 @@ namespace Web_SmartVidéo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Log"] != null)
+            if (Session["Log"] != null && Session["LogOK"] != null)
             {
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
                 link.InnerText = (String)Session["Log"];
+                link.HRef = (String)Session["LogOK"];
             }
         }
     }

@@ -385,6 +385,99 @@ namespace Web_SmartVidéo.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UtilisateursDTO", Namespace="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO")]
+    [System.SerializableAttribute()]
+    public partial class UtilisateursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PseudoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Carte {
+            get {
+                return this.CarteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarteField, value) != true)) {
+                    this.CarteField = value;
+                    this.RaisePropertyChanged("Carte");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pseudo {
+            get {
+                return this.PseudoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PseudoField, value) != true)) {
+                    this.PseudoField = value;
+                    this.RaisePropertyChanged("Pseudo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -430,6 +523,18 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
         System.Threading.Tasks.Task<string> LoginAsync(string E, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/findUser", ReplyAction="http://tempuri.org/IService1/findUserResponse")]
+        Web_SmartVidéo.ServiceReference1.UtilisateursDTO findUser(string E);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/findUser", ReplyAction="http://tempuri.org/IService1/findUserResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.UtilisateursDTO> findUserAsync(string E);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
+        void Update(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
+        System.Threading.Tasks.Task UpdateAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -513,6 +618,22 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> LoginAsync(string E, string pass) {
             return base.Channel.LoginAsync(E, pass);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.UtilisateursDTO findUser(string E) {
+            return base.Channel.findUser(E);
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.UtilisateursDTO> findUserAsync(string E) {
+            return base.Channel.findUserAsync(E);
+        }
+        
+        public void Update(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
+            base.Channel.Update(user);
+        }
+        
+        public System.Threading.Tasks.Task UpdateAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.UpdateAsync(user);
         }
     }
 }

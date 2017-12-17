@@ -144,7 +144,6 @@ namespace DAL
         public void SetTrailer(int id,string trailer)
         {
 
-            Console.WriteLine("coucou");
             var query = from f in _context.Films where f.id == id select f;
             
             foreach (Film f in query)

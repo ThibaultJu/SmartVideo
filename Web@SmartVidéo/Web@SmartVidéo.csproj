@@ -195,6 +195,12 @@
     <Content Include="Connected Services\ServiceReference1\Web_SmartVidéo.ServiceReference1.RealisateurDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\ServiceReference1\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ServiceReference1\Web_SmartVidéo.ServiceReference1.UtilisateursDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="logo.PNG" />
@@ -227,7 +233,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Disconect.aspx" />
+    <Content Include="InfoUser.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -288,12 +294,12 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Disconect.aspx.cs">
-      <DependentUpon>Disconect.aspx</DependentUpon>
+    <Compile Include="InfoUser.aspx.cs">
+      <DependentUpon>InfoUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Disconect.aspx.designer.cs">
-      <DependentUpon>Disconect.aspx</DependentUpon>
+    <Compile Include="InfoUser.aspx.designer.cs">
+      <DependentUpon>InfoUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

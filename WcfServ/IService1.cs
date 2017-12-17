@@ -1,4 +1,5 @@
 ﻿using FilmDTOLibrary;
+using SmartVideoDBDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,12 @@ namespace WcfServ
 
         [OperationContract]
         String Login(String E,String pass);
+
+        [OperationContract]
+        UtilisateursDTO findUser(string E);
+
+        [OperationContract]
+        void Update(UtilisateursDTO user);
 
     }
 

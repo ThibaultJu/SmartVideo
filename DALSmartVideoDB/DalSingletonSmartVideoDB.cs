@@ -34,8 +34,27 @@ namespace DALSmartVideoDB
         }
 
 
-        public string Login(string E,string pass)
+        public UtilisateursDTO findUser(string E)
         {
+            var query = "SELECT * FROM Utilisateurs where Email = '" + E +"';";
+            var user = _context.ExecuteQuery<UtilisateursDTO>(query).Select(f => new UtilisateursDTO
+            {
+                Email = f.Email,
+                Pseudo = f.Pseudo,
+                Password = f.Password,
+                Carte = f.Carte
+            }).ToList();
+            if (user.Any())
+            {
+                UtilisateursDTO tmp = (UtilisateursDTO)user.First();
+                return tmp;
+            }
+            else
+                return null;
+        }
+        public string Login(string E, string pass)
+        {
+
             var query = "SELECT * FROM Utilisateurs where Email = '" + E + "' AND Password = '" + pass + "';";
             var user = _context.ExecuteQuery<UtilisateursDTO>(query).Select(f => new UtilisateursDTO
             {
@@ -52,5 +71,19 @@ namespace DALSmartVideoDB
             else
                 return null;
         }
+        public void Update(UtilisateursDTO user)
+        {
+            var query = from f in _context.Utilisateurs where f.Email == user.Email select f;
+
+            foreach (Utilisateur f in query)
+            {
+                f.Carte = user.Carte;
+                f.Password = user.Password;
+                f.Pseudo = user.Pseudo;
+            }
+            _context.SubmitChanges();
+        }
+
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BLL;
 using BLLSmartVideoDB;
 using FilmDTOLibrary;
+using SmartVideoDBDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,14 @@ namespace WcfServ
         public String Login(string E, string pass)
         {
             return BllSmart.Login(E, pass);
+        }
+        public UtilisateursDTO findUser(string E)
+        {
+            return BllSmart.findUser(E);
+        }
+        public void Update(UtilisateursDTO user)
+        {
+            BllSmart.Update(user);
         }
     }
 }
