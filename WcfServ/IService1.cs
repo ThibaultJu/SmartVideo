@@ -41,8 +41,10 @@ namespace WcfServ
         UtilisateursDTO findUser(string E);
 
         [OperationContract]
-        void Update(UtilisateursDTO user);
+        void UpdateUser(UtilisateursDTO user);
 
+        [OperationContract]
+        Boolean InsertUser(UtilisateursDTO user);
     }
 
 

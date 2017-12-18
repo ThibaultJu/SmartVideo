@@ -15,5 +15,6 @@
 		<input id="Password1" type="password" runat="server" /></p>
 	<p>
 		<asp:Button ID="Button1" runat="server" Text="Connexion" OnClick="Button1_Click" />
+		<asp:Button ID="Button2" runat="server" Text="Ajout nouvel Utilisateur" OnClick="Button2_Click" />
 	</p>
 </asp:Content>

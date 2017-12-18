@@ -71,7 +71,7 @@ namespace DALSmartVideoDB
             else
                 return null;
         }
-        public void Update(UtilisateursDTO user)
+        public void UpdateUser(UtilisateursDTO user)
         {
             var query = from f in _context.Utilisateurs where f.Email == user.Email select f;
 
@@ -84,6 +84,24 @@ namespace DALSmartVideoDB
             _context.SubmitChanges();
         }
 
-
+        public Boolean InsertUser(UtilisateursDTO user)
+        {
+            Utilisateur usr = new Utilisateur();
+            usr.Carte = user.Carte;
+            usr.Email = user.Email;
+            usr.Pseudo = user.Pseudo;
+            usr.Password = user.Password;
+            _context.Utilisateurs.InsertOnSubmit(usr);
+            try
+            {
+                _context.SubmitChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
     }
 }

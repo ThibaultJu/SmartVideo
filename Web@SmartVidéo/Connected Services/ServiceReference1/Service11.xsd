@@ -115,16 +115,30 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Update">
+  <xs:element name="UpdateUser">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="user" nillable="true" type="q7:UtilisateursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateResponse">
+  <xs:element name="UpdateUserResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="user" nillable="true" type="q8:UtilisateursDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUserResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

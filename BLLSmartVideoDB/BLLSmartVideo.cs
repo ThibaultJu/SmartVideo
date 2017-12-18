@@ -18,9 +18,13 @@ namespace BLLSmartVideoDB
         {
             return DalSingletonSmartVideoDB.Singleton().findUser(E);
         }
-        public void Update(UtilisateursDTO user)
+        public void UpdateUser(UtilisateursDTO user)
         {
-            DalSingletonSmartVideoDB.Singleton().Update(user);
+            DalSingletonSmartVideoDB.Singleton().UpdateUser(user);
+        }
+        public Boolean InsertUser(UtilisateursDTO user)
+        {
+            return DalSingletonSmartVideoDB.Singleton().InsertUser(user);
         }
     }
 }

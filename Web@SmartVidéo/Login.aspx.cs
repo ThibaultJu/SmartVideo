@@ -10,8 +10,10 @@ namespace Web_SmartVidéo
 {
     public partial class Login : System.Web.UI.Page
     {
+        AuthenticationControler aC;
         protected void Page_Load(object sender, EventArgs e)
         {
+            aC = new AuthenticationControler();
             if (Session["Log"] != null && Session["LogOK"] != null)
             {
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
@@ -22,8 +24,7 @@ namespace Web_SmartVidéo
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            string user = service.Login(TextBox1.Text, Password1.Value.ToString());
+            string user = aC.Login(TextBox1.Text, Password1.Value.ToString());
             if (user != null)
             {
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
@@ -34,6 +35,11 @@ namespace Web_SmartVidéo
                 Session["Email"] = TextBox1.Text;
                 Server.Transfer("Default.aspx", true);
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("LoginAddUser.aspx", true);
         }
     }
 }

@@ -55,9 +55,13 @@ namespace WcfServ
         {
             return BllSmart.findUser(E);
         }
-        public void Update(UtilisateursDTO user)
+        public void UpdateUser(UtilisateursDTO user)
         {
-            BllSmart.Update(user);
+            BllSmart.UpdateUser(user);
+        }
+        public Boolean InsertUser(UtilisateursDTO user)
+        {
+            return BllSmart.InsertUser(user);
         }
     }
 }

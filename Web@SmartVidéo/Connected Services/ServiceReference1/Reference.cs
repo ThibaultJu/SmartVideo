@@ -530,11 +530,17 @@ namespace Web_SmartVidéo.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/findUser", ReplyAction="http://tempuri.org/IService1/findUserResponse")]
         System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.UtilisateursDTO> findUserAsync(string E);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
-        void Update(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateUser", ReplyAction="http://tempuri.org/IService1/UpdateUserResponse")]
+        void UpdateUser(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
-        System.Threading.Tasks.Task UpdateAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateUser", ReplyAction="http://tempuri.org/IService1/UpdateUserResponse")]
+        System.Threading.Tasks.Task UpdateUserAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertUser", ReplyAction="http://tempuri.org/IService1/InsertUserResponse")]
+        bool InsertUser(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertUser", ReplyAction="http://tempuri.org/IService1/InsertUserResponse")]
+        System.Threading.Tasks.Task<bool> InsertUserAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -628,12 +634,20 @@ namespace Web_SmartVidéo.ServiceReference1 {
             return base.Channel.findUserAsync(E);
         }
         
-        public void Update(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
-            base.Channel.Update(user);
+        public void UpdateUser(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
+            base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task UpdateAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
-            return base.Channel.UpdateAsync(user);
+        public System.Threading.Tasks.Task UpdateUserAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.UpdateUserAsync(user);
+        }
+        
+        public bool InsertUser(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.InsertUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertUserAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.InsertUserAsync(user);
         }
     }
 }
