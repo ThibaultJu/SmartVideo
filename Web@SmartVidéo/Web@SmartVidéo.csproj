@@ -339,6 +339,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FilmDTOLibrary\FilmDTOLibrary.csproj">
+      <Project>{4577d9f4-496f-4891-96b0-da152984bfb6}</Project>
+      <Name>FilmDTOLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

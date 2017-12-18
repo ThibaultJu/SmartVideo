@@ -47,6 +47,8 @@ namespace DAL
                     Title = f.Title,
                     Original_title = f.Original_title,
                     Runtime = f.Runtime,
+                    Acteurlist = GetActorWithId(f.Id),
+                    Genrelist = GetGenreWithId(f.Id),
                     Posterpath = f.Posterpath,
                     Trailer = f.Trailer
                 }).ToList();

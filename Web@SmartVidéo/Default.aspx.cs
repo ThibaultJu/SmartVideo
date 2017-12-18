@@ -12,18 +12,26 @@ namespace Web_SmartVidéo
     public partial class _Default : Page
     {
         AuthenticationControler aC;
+        public List<FilmDTO> listFilms;
+        public List<ActeurDTO> listActors;
+        public List<ActeurDTO> listActorsMovie;
         protected void Page_Load(object sender, EventArgs e)
         {
-            aC = new AuthenticationControler();
-            if (Session["Log"] != null && Session["LogOK"] != null)
+            if(!IsPostBack)
             {
-                HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
-                link.InnerText = (String)Session["Log"];
-                link.HRef = (String)Session["LogOK"];
+                listFilms = new List<FilmDTO>();
+                aC = new AuthenticationControler();
+                if (Session["Log"] != null && Session["LogOK"] != null)
+                {
+                    HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
+                    link.InnerText = (String)Session["Log"];
+                    link.HRef = (String)Session["LogOK"];
+                }
+                FilmDTO[] films = aC.LoadFilm(0, 5);
+                listFilms = films.ToList();
             }
-            FilmDTO [] films= aC.LoadFilm(0, 15);
-            GridViewFilm.DataSource = films.ToList();
-            GridViewFilm.DataBind();
+
         }
+        
     }
 }
