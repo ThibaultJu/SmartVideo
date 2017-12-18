@@ -10,6 +10,6 @@
 namespace Web_SmartVidéo {
     
     
-    public partial class Details {
+    public partial class DetailsF {
     }
 }
