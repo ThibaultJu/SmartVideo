@@ -2,16 +2,29 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 	<div class="RechercheFilm">
-		<p> </p>
+		<p> &nbsp;</p>
+		<asp:Label ID="Label1" runat="server" Text="Numéro de page: "></asp:Label>
+		<asp:Label ID="LabelPage" runat="server" Text="1"></asp:Label>
+		<asp:Label ID="Label2" runat="server" Text="Films par page : "></asp:Label>
+		<asp:DropDownList ID="DropDownList1" AutoPostBack="True" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+			<asp:ListItem Text="5" Value="5" />
+			<asp:ListItem Text="10" Value="10" />
+			<asp:ListItem Text="25" Value="25" />
+			<asp:ListItem Text="50" Value="50" />
+		</asp:DropDownList>
+		<p> &nbsp;</p>
+		<asp:Button ID="Button1" runat="server" Text="Page précédente" OnClick="Button1_Click" />
+		<asp:Button ID="Button2" runat="server" Text="Page suivante" OnClick="Button2_Click" />
 	 </div>
 	<%foreach (Web_SmartVidéo.ServiceReference1.FilmDTO film in this.listFilms)
       { %>
         <div class="Film">
-			<h2 class="title"><a href="DetailsF.aspx?titre=<%= film.Title %>"><%= film.Title %></a></h2><br / />
+			<h2 class="title"><a href="DetailsF.aspx?titre=<%= film.Id %>"><%= film.Title %>
+				</a></h2><br / />
             <img src="http://image.tmdb.org/t/p/w185/<% =film.Posterpath %>" alt="Poster" >            
             <p></p><br />
 			<p> Titre original : <%=film.Original_title %></p>
-            <p>Durée du film : <%= film.Runtime %> minutes.</p>
+            <p>Durée du film : <%= film.Runtime %> minutes</p>
             <%int i = 0; %>
             <p>Genres : <%foreach (Web_SmartVidéo.ServiceReference1.GenreDTO genre in film.Genrelist)
                             {
@@ -27,5 +40,19 @@
 
         </div>
     <%} %>
-
+		<div class="RechercheFilm">
+		<p> &nbsp;</p>
+		<asp:Label ID="Label3" runat="server" Text="Numéro de page: "></asp:Label>
+		<asp:Label ID="LabelPagebis" runat="server" Text="1"></asp:Label>
+		<asp:Label ID="Label5" runat="server" Text="Films par page : "></asp:Label>
+		<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True"  OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+			<asp:ListItem Text="5" Value="5" />
+			<asp:ListItem Text="10" Value="10" />
+			<asp:ListItem Text="25" Value="25" />
+			<asp:ListItem Text="50" Value="50" />
+		</asp:DropDownList>
+		<p> &nbsp;</p>
+		<asp:Button ID="Button3" runat="server" Text="Page précédente" OnClick="Button1_Click" />
+		<asp:Button ID="Button4" runat="server" Text="Page suivante" OnClick="Button2_Click" />
+	 </div>
 </asp:Content>

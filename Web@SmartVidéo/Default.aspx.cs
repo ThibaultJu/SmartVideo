@@ -15,10 +15,9 @@ namespace Web_SmartVidéo
         public List<FilmDTO> listFilms;
         public List<ActeurDTO> listActors;
         public List<ActeurDTO> listActorsMovie;
+        private int index = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
-            {
                 listFilms = new List<FilmDTO>();
                 aC = new AuthenticationControler();
                 if (Session["Log"] != null && Session["LogOK"] != null)
@@ -27,11 +26,65 @@ namespace Web_SmartVidéo
                     link.InnerText = (String)Session["Log"];
                     link.HRef = (String)Session["LogOK"];
                 }
-                FilmDTO[] films = aC.LoadFilm(0, 5);
-                listFilms = films.ToList();
-            }
+                if(Session["Index"] != null)
+                {
+                    index = (int)Session["Index"];
+                }
+                
+                listFilms = aC.LoadFilm(index, 5);
+
 
         }
-        
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            int i = (int.Parse(LabelPage.Text)) - 1;
+            if (i < 1)
+                i = 1;
+            LabelPage.Text = i.ToString();
+            LabelPagebis.Text = i.ToString();
+            string var = DropDownList1.SelectedValue;
+            int tmp = int.Parse(var);
+            if ((index - tmp) >= 0)
+                index = index - tmp;
+            else
+                index = 0;
+
+            listFilms = aC.LoadFilm(index, tmp);
+            Session["Index"] = index;
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+            int i= (int.Parse(LabelPage.Text)) + 1;
+            LabelPage.Text = i.ToString();
+            LabelPagebis.Text = i.ToString();
+            string var = DropDownList1.SelectedValue;
+            int tmp = int.Parse(var);
+            index = index + tmp;
+
+            listFilms = aC.LoadFilm(index, tmp);
+            Session["Index"] = index;
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string var = DropDownList1.SelectedValue;
+            int tmp = int.Parse(var);
+            listFilms = aC.LoadFilm(index, tmp);
+            DropDownList2.SelectedValue = var;
+            int i = (index/tmp)+1;
+            LabelPage.Text = i.ToString();
+            LabelPagebis.Text = i.ToString();
+        }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string var = DropDownList2.SelectedValue;
+            int tmp = int.Parse(var);
+            listFilms = aC.LoadFilm(index, tmp);
+            DropDownList1.SelectedValue = var;
+        }
     }
 }

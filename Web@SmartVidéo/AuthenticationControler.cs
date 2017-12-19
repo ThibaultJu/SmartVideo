@@ -29,9 +29,28 @@ namespace Web_SmartVidéo
         {
             return service.InsertUser(user);
         }
-        public FilmDTO[] LoadFilm(int debut, int fin)
+        /*public FilmDTO[] LoadFilm(int debut, int fin)
         {
             return service.GetFilms(debut, fin);
+        }*/
+        public List<FilmDTO> LoadFilm(int debut,int nbre)
+        {
+            List<FilmDTO> listFilms = new List<FilmDTO>();
+            List<FilmDTO> tmp = new List<FilmDTO>();
+            int i=5;
+            while(i<=nbre)
+            {
+                tmp= (service.GetFilms(debut, 5)).ToList();
+                debut = i;
+                i = i + 5;
+                listFilms.AddRange(tmp);
+            }
+            return listFilms;
+        }
+        public FilmDTO GetFilm(int id)
+        {
+            return (service.GetFilmWithId(id)).ToList().First();
+
         }
     }
 }
