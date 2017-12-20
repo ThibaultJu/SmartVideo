@@ -86,5 +86,15 @@ namespace Web_SmartVidéo
             listFilms = aC.LoadFilm(index, tmp);
             DropDownList1.SelectedValue = var;
         }
+
+        protected void ButtonRechercheFilm_Click(object sender, EventArgs e)
+        {
+            listFilms = aC.RechercheFilmbyName(TextBoxIdFilm.Text);
+        }
+        protected void ButtonRechercheActeur_Click(object sender, EventArgs e)
+        {
+            listActors = aC.RechercheActorByName(TextBoxIdFilm.Text);
+            listFilms = aC.RechercheFilmByActors(listActors);
+        }
     }
 }

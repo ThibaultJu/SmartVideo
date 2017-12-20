@@ -488,29 +488,47 @@ namespace Web_SmartVidéo.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilms", ReplyAction="http://tempuri.org/IService1/GetFilmsResponse")]
         System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmsAsync(int debut, int nb);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreWithId", ReplyAction="http://tempuri.org/IService1/GetGenreWithIdResponse")]
-        Web_SmartVidéo.ServiceReference1.GenreDTO[] GetGenreWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreById", ReplyAction="http://tempuri.org/IService1/GetGenreByIdResponse")]
+        Web_SmartVidéo.ServiceReference1.GenreDTO[] GetGenreById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreWithId", ReplyAction="http://tempuri.org/IService1/GetGenreWithIdResponse")]
-        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.GenreDTO[]> GetGenreWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreById", ReplyAction="http://tempuri.org/IService1/GetGenreByIdResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.GenreDTO[]> GetGenreByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorWithId", ReplyAction="http://tempuri.org/IService1/GetActorWithIdResponse")]
-        Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorById", ReplyAction="http://tempuri.org/IService1/GetActorByIdResponse")]
+        Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorWithId", ReplyAction="http://tempuri.org/IService1/GetActorWithIdResponse")]
-        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorById", ReplyAction="http://tempuri.org/IService1/GetActorByIdResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
-        Web_SmartVidéo.ServiceReference1.RealisateurDTO[] GetDirectorWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorByName", ReplyAction="http://tempuri.org/IService1/GetActorByNameResponse")]
+        Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
-        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.RealisateurDTO[]> GetDirectorWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorByName", ReplyAction="http://tempuri.org/IService1/GetActorByNameResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorByNameAsync(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
-        Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByActors", ReplyAction="http://tempuri.org/IService1/GetFilmByActorsResponse")]
+        Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmByActors(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
-        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByActors", ReplyAction="http://tempuri.org/IService1/GetFilmByActorsResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmByActorsAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorById", ReplyAction="http://tempuri.org/IService1/GetDirectorByIdResponse")]
+        Web_SmartVidéo.ServiceReference1.RealisateurDTO[] GetDirectorById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorById", ReplyAction="http://tempuri.org/IService1/GetDirectorByIdResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.RealisateurDTO[]> GetDirectorByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmById", ReplyAction="http://tempuri.org/IService1/GetFilmByIdResponse")]
+        Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmById", ReplyAction="http://tempuri.org/IService1/GetFilmByIdResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByName", ReplyAction="http://tempuri.org/IService1/GetFilmByNameResponse")]
+        Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmByName(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByName", ReplyAction="http://tempuri.org/IService1/GetFilmByNameResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmByNameAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetTrailer", ReplyAction="http://tempuri.org/IService1/SetTrailerResponse")]
         void SetTrailer(int id, string trailer);
@@ -578,36 +596,60 @@ namespace Web_SmartVidéo.ServiceReference1 {
             return base.Channel.GetFilmsAsync(debut, nb);
         }
         
-        public Web_SmartVidéo.ServiceReference1.GenreDTO[] GetGenreWithId(int id) {
-            return base.Channel.GetGenreWithId(id);
+        public Web_SmartVidéo.ServiceReference1.GenreDTO[] GetGenreById(int id) {
+            return base.Channel.GetGenreById(id);
         }
         
-        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.GenreDTO[]> GetGenreWithIdAsync(int id) {
-            return base.Channel.GetGenreWithIdAsync(id);
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.GenreDTO[]> GetGenreByIdAsync(int id) {
+            return base.Channel.GetGenreByIdAsync(id);
         }
         
-        public Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorWithId(int id) {
-            return base.Channel.GetActorWithId(id);
+        public Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorById(int id) {
+            return base.Channel.GetActorById(id);
         }
         
-        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorWithIdAsync(int id) {
-            return base.Channel.GetActorWithIdAsync(id);
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorByIdAsync(int id) {
+            return base.Channel.GetActorByIdAsync(id);
         }
         
-        public Web_SmartVidéo.ServiceReference1.RealisateurDTO[] GetDirectorWithId(int id) {
-            return base.Channel.GetDirectorWithId(id);
+        public Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorByName(string name) {
+            return base.Channel.GetActorByName(name);
         }
         
-        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.RealisateurDTO[]> GetDirectorWithIdAsync(int id) {
-            return base.Channel.GetDirectorWithIdAsync(id);
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorByNameAsync(string name) {
+            return base.Channel.GetActorByNameAsync(name);
         }
         
-        public Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmWithId(int id) {
-            return base.Channel.GetFilmWithId(id);
+        public Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmByActors(int id) {
+            return base.Channel.GetFilmByActors(id);
         }
         
-        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmWithIdAsync(int id) {
-            return base.Channel.GetFilmWithIdAsync(id);
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmByActorsAsync(int id) {
+            return base.Channel.GetFilmByActorsAsync(id);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.RealisateurDTO[] GetDirectorById(int id) {
+            return base.Channel.GetDirectorById(id);
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.RealisateurDTO[]> GetDirectorByIdAsync(int id) {
+            return base.Channel.GetDirectorByIdAsync(id);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmById(int id) {
+            return base.Channel.GetFilmById(id);
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmByIdAsync(int id) {
+            return base.Channel.GetFilmByIdAsync(id);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.FilmDTO[] GetFilmByName(string name) {
+            return base.Channel.GetFilmByName(name);
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.FilmDTO[]> GetFilmByNameAsync(string name) {
+            return base.Channel.GetFilmByNameAsync(name);
         }
         
         public void SetTrailer(int id, string trailer) {

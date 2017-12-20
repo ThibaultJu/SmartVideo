@@ -14,29 +14,47 @@
   <wsdl:message name="IService1_GetFilms_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetFilmsResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetGenreWithId_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetGenreWithId" />
+  <wsdl:message name="IService1_GetGenreById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenreById" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetGenreWithId_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetGenreWithIdResponse" />
+  <wsdl:message name="IService1_GetGenreById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenreByIdResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetActorWithId_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetActorWithId" />
+  <wsdl:message name="IService1_GetActorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorById" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetActorWithId_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetActorWithIdResponse" />
+  <wsdl:message name="IService1_GetActorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorByIdResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetDirectorWithId_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDirectorWithId" />
+  <wsdl:message name="IService1_GetActorByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorByName" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetDirectorWithId_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDirectorWithIdResponse" />
+  <wsdl:message name="IService1_GetActorByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorByNameResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetFilmWithId_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetFilmWithId" />
+  <wsdl:message name="IService1_GetFilmByActors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByActors" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetFilmWithId_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetFilmWithIdResponse" />
+  <wsdl:message name="IService1_GetFilmByActors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByActorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDirectorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectorById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDirectorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFilmById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFilmById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFilmByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFilmByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByNameResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_SetTrailer_InputMessage">
     <wsdl:part name="parameters" element="tns:SetTrailer" />
@@ -73,21 +91,33 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilms" message="tns:IService1_GetFilms_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFilmsResponse" message="tns:IService1_GetFilms_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetGenreWithId">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetGenreWithId" message="tns:IService1_GetGenreWithId_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetGenreWithIdResponse" message="tns:IService1_GetGenreWithId_OutputMessage" />
+    <wsdl:operation name="GetGenreById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetGenreById" message="tns:IService1_GetGenreById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetGenreByIdResponse" message="tns:IService1_GetGenreById_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetActorWithId">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetActorWithId" message="tns:IService1_GetActorWithId_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetActorWithIdResponse" message="tns:IService1_GetActorWithId_OutputMessage" />
+    <wsdl:operation name="GetActorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetActorById" message="tns:IService1_GetActorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetActorByIdResponse" message="tns:IService1_GetActorById_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDirectorWithId">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDirectorWithId" message="tns:IService1_GetDirectorWithId_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDirectorWithIdResponse" message="tns:IService1_GetDirectorWithId_OutputMessage" />
+    <wsdl:operation name="GetActorByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetActorByName" message="tns:IService1_GetActorByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetActorByNameResponse" message="tns:IService1_GetActorByName_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetFilmWithId">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilmWithId" message="tns:IService1_GetFilmWithId_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFilmWithIdResponse" message="tns:IService1_GetFilmWithId_OutputMessage" />
+    <wsdl:operation name="GetFilmByActors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilmByActors" message="tns:IService1_GetFilmByActors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFilmByActorsResponse" message="tns:IService1_GetFilmByActors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDirectorById" message="tns:IService1_GetDirectorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDirectorByIdResponse" message="tns:IService1_GetDirectorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilmById" message="tns:IService1_GetFilmById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFilmByIdResponse" message="tns:IService1_GetFilmById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilmByName" message="tns:IService1_GetFilmByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFilmByNameResponse" message="tns:IService1_GetFilmByName_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetTrailer">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetTrailer" message="tns:IService1_SetTrailer_InputMessage" />
@@ -121,8 +151,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetGenreWithId">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetGenreWithId" style="document" />
+    <wsdl:operation name="GetGenreById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetGenreById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -130,8 +160,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetActorWithId">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetActorWithId" style="document" />
+    <wsdl:operation name="GetActorById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetActorById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -139,8 +169,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDirectorWithId">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetDirectorWithId" style="document" />
+    <wsdl:operation name="GetActorByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetActorByName" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -148,8 +178,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetFilmWithId">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetFilmWithId" style="document" />
+    <wsdl:operation name="GetFilmByActors">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFilmByActors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDirectorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFilmById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFilmByName" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

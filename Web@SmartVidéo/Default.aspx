@@ -3,6 +3,15 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 	<div class="RechercheFilm">
 		<p> &nbsp;</p>
+		<asp:Label ID="Label4" runat="server" Text="Nom à rechercher: "></asp:Label>
+		<asp:TextBox ID="TextBoxIdFilm" runat="server"></asp:TextBox>
+		<p> 
+			&nbsp;</p>
+		<asp:Button ID="ButtonRechercheFilm" runat="server" Text="Rechercher film" OnClick="ButtonRechercheFilm_Click" />
+		<asp:Button ID="ButtonRechercheActor" runat="server" Text="Rechercher Acteur" OnClick="ButtonRechercheActeur_Click" />
+	 </div>
+	<div class="PaginationFilm">
+		<p> &nbsp;</p>
 		<asp:Label ID="Label1" runat="server" Text="Numéro de page: "></asp:Label>
 		<asp:Label ID="LabelPage" runat="server" Text="1"></asp:Label>
 		<asp:Label ID="Label2" runat="server" Text="Films par page : "></asp:Label>
@@ -40,7 +49,7 @@
 
         </div>
     <%} %>
-		<div class="RechercheFilm">
+		<div class="PaginationFilm">
 		<p> &nbsp;</p>
 		<asp:Label ID="Label3" runat="server" Text="Numéro de page: "></asp:Label>
 		<asp:Label ID="LabelPagebis" runat="server" Text="1"></asp:Label>

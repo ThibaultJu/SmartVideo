@@ -20,16 +20,25 @@ namespace WcfServ
         List<FilmDTO> GetFilms(int debut, int nb);
 
         [OperationContract]
-        List<GenreDTO> GetGenreWithId(int id);
+        List<GenreDTO> GetGenreById(int id);
 
         [OperationContract]
-        List<ActeurDTO> GetActorWithId(int id);
+        List<ActeurDTO> GetActorById(int id);
 
         [OperationContract]
-        List<RealisateurDTO> GetDirectorWithId(int id);
+        List<ActeurDTO> GetActorByName(string name);
 
         [OperationContract]
-        List<FilmDTO> GetFilmWithId(int id);
+        List<FilmDTO> GetFilmByActors(int id);
+
+        [OperationContract]
+        List<RealisateurDTO> GetDirectorById(int id);
+
+        [OperationContract]
+        List<FilmDTO> GetFilmById(int id);
+
+        [OperationContract]
+        List<FilmDTO> GetFilmByName(string name);
 
         [OperationContract]
         void SetTrailer(int id, String trailer);

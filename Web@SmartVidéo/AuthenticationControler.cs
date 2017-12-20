@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Web;
 using Web_SmartVidéo.ServiceReference1;
 
@@ -12,6 +13,7 @@ namespace Web_SmartVidéo
         public AuthenticationControler()
         {
             service = new ServiceReference1.Service1Client();
+           
         }
         public void ModifyUser(UtilisateursDTO user)
         {
@@ -29,10 +31,25 @@ namespace Web_SmartVidéo
         {
             return service.InsertUser(user);
         }
-        /*public FilmDTO[] LoadFilm(int debut, int fin)
+        public List<FilmDTO> RechercheFilmbyName(string name)
         {
-            return service.GetFilms(debut, fin);
-        }*/
+
+            return service.GetFilmByName(name).ToList();
+        }
+        public List<ActeurDTO> RechercheActorByName(string name)
+        {
+            return service.GetActorByName(name).ToList();
+        }
+        public List<FilmDTO>  RechercheFilmByActors (List<ActeurDTO> listActors)
+        {
+            List<FilmDTO> ListFilms = new List<FilmDTO>();
+            foreach(ActeurDTO act in listActors)
+            {
+                ListFilms.AddRange(service.GetFilmByActors(act.Id));
+            }
+
+            return ListFilms;
+        }
         public List<FilmDTO> LoadFilm(int debut,int nbre)
         {
             List<FilmDTO> listFilms = new List<FilmDTO>();
@@ -49,7 +66,7 @@ namespace Web_SmartVidéo
         }
         public FilmDTO GetFilm(int id)
         {
-            return (service.GetFilmWithId(id)).ToList().First();
+            return (service.GetFilmById(id)).ToList().First();
 
         }
     }

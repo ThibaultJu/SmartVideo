@@ -35,6 +35,18 @@
 							i++;
 						}%>
         </p><br />
+				<%i = 0; %>
+		<p>Realisateurs : <%foreach (Web_SmartVidéo.ServiceReference1.RealisateurDTO rea in film.Realisateurlist)
+                        {
+                                if (i > 0)
+                                {%>
+									<%=", " %>
+										
+                                <%}%>
+							<%=rea.Name %><%           
+							i++;
+						}%>
+        </p><br />
 
     </div>
 </asp:Content>

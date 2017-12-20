@@ -47,8 +47,9 @@ namespace DAL
                     Title = f.Title,
                     Original_title = f.Original_title,
                     Runtime = f.Runtime,
-                    Acteurlist = GetActorWithId(f.Id),
-                    Genrelist = GetGenreWithId(f.Id),
+                    Acteurlist = GetActorById(f.Id),
+                    Genrelist = GetGenreById(f.Id),
+                    Realisateurlist = GetDirectorById(f.Id),
                     Posterpath = f.Posterpath,
                     Trailer = f.Trailer
                 }).ToList();
@@ -62,7 +63,7 @@ namespace DAL
             }
         }
 
-        public List<GenreDTO> GetGenreWithId(int id)
+        public List<GenreDTO> GetGenreById(int id)
         {
             var query = "SELECT Distinct Genre.* FROM FilmGenre INNER JOIN Genre ON FilmGenre.id_genre = Genre.id WHERE FilmGenre.id_film = " + id + ";";
             try
@@ -81,7 +82,7 @@ namespace DAL
             }
         }
 
-        public List<ActeurDTO> GetActorWithId(int id)
+        public List<ActeurDTO> GetActorById(int id)
         {
             var query = "SELECT Distinct Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
             try
@@ -100,8 +101,55 @@ namespace DAL
                 return new List<ActeurDTO>();
             }
         }
+        public List<ActeurDTO> GetActorByName(string name)
+        {
+            var query = "SELECT Actor.* FROM Actor WHERE Actor.name like '%" + name + "%';";
+            try
+            {
+                var list = _context.ExecuteQuery<ActeurDTO>(query).Select(a => new ActeurDTO
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    Character = a.Character
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " erreur d'affichage des résultats");
+                return new List<ActeurDTO>();
+            }
+        }
 
-        public List<RealisateurDTO> GetDirectorWithId(int id)
+        public List<FilmDTO> GetFilmByActors(int id)
+        {
+            var query = "SELECT Film.* FROM FilmActor INNER JOIN Film ON FilmActor.id_film = Film.id WHERE FilmActor.id_actor = " + id + ";";
+            try
+            {
+                var list = _context.ExecuteQuery<FilmDTO>(query).Select(f => new FilmDTO
+                {
+                    Id = f.Id,
+                    Title = f.Title,
+                    Original_title = f.Original_title,
+                    Runtime = f.Runtime,
+                    Posterpath = f.Posterpath,
+                    Acteurlist = GetActorById(f.Id),
+                    Genrelist = GetGenreById(f.Id),
+                    Realisateurlist = GetDirectorById(f.Id),
+                    Trailer = f.Trailer
+
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " erreur d'affichage des résultats");
+                return new List<FilmDTO>();
+            }
+        }
+
+
+        public List<RealisateurDTO> GetDirectorById(int id)
         {
             var query = "SELECT Distinct Realisateur.* FROM FilmRealisateur INNER JOIN Realisateur ON FilmRealisateur.id_realisateur = Realisateur.id WHERE FilmRealisateur.id_film = " + id + ";";
             try
@@ -120,7 +168,7 @@ namespace DAL
                 return new List<RealisateurDTO>();
             }
         }
-        public List<FilmDTO> GetFilmWithId(int id)
+        public List<FilmDTO> GetFilmById(int id)
         {
             var query = "SELECT * FROM Film WHERE Film.Id = " + id + ";";
             try
@@ -132,8 +180,35 @@ namespace DAL
                     Original_title = f.Original_title,
                     Runtime = f.Runtime,
                     Posterpath = f.Posterpath,
-                    Acteurlist = GetActorWithId(f.Id),
-                    Genrelist = GetGenreWithId(f.Id),
+                    Acteurlist = GetActorById(f.Id),
+                    Genrelist = GetGenreById(f.Id),
+                    Realisateurlist = GetDirectorById(f.Id),
+                    Trailer = f.Trailer
+
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " erreur d'affichage des résultats");
+                return new List<FilmDTO>();
+            }
+        }
+        public List<FilmDTO> GetFilmByName(string name)
+        {
+            var query = "SELECT * FROM Film WHERE Film.title like '%" + name + "%' or Film.original_title like '%" + name + "%' ;";
+            try
+            {
+                var list = _context.ExecuteQuery<FilmDTO>(query).Select(f => new FilmDTO
+                {
+                    Id = f.Id,
+                    Title = f.Title,
+                    Original_title = f.Original_title,
+                    Runtime = f.Runtime,
+                    Posterpath = f.Posterpath,
+                    Acteurlist = GetActorById(f.Id),
+                    Genrelist = GetGenreById(f.Id),
+                    Realisateurlist = GetDirectorById(f.Id),
                     Trailer = f.Trailer
 
                 }).ToList();

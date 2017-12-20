@@ -25,23 +25,35 @@ namespace WcfServ
             return Bll.GetFilms(debut, nb);
         }
         
-        public List<GenreDTO> GetGenreWithId(int id)
+        public List<GenreDTO> GetGenreById(int id)
         {
-            return Bll.GetGenreWithId(id);
+            return Bll.GetGenreById(id);
         }
 
-        public List<ActeurDTO> GetActorWithId(int id)
+        public List<ActeurDTO> GetActorById(int id)
         {
-            return Bll.GetActorWithId(id);
+            return Bll.GetActorById(id);
         }
 
-        public List<RealisateurDTO> GetDirectorWithId(int id)
+        public List<ActeurDTO> GetActorByName(string name)
         {
-            return Bll.GetDirectorWithId(id);
+            return Bll.GetActorByName(name);
         }
-        public List<FilmDTO> GetFilmWithId(int id)
+        public List<FilmDTO> GetFilmByActors(int id)
         {
-            return Bll.GetFilmWithId(id);
+            return Bll.GetFilmByActors(id);
+        }
+        public List<RealisateurDTO> GetDirectorById(int id)
+        {
+            return Bll.GetDirectorById(id);
+        }
+        public List<FilmDTO> GetFilmById(int id)
+        {
+            return Bll.GetFilmById(id);
+        }
+        public List<FilmDTO> GetFilmByName(string name)
+        {
+            return Bll.GetFilmByName(name);
         }
         public void SetTrailer(int id, String trailer)
         {

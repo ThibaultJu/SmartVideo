@@ -17,25 +17,36 @@ namespace BLL
             return DalSingleton.Singleton().GetFilms(debut, nb);
         }
 
-        public List<GenreDTO> GetGenreWithId(int id)
+        public List<GenreDTO> GetGenreById(int id)
         {
-            return DalSingleton.Singleton().GetGenreWithId(id);
+            return DalSingleton.Singleton().GetGenreById(id);
         }
 
-        public List<ActeurDTO> GetActorWithId(int id)
+        public List<ActeurDTO> GetActorById(int id)
         {
-            return DalSingleton.Singleton().GetActorWithId(id);
+            return DalSingleton.Singleton().GetActorById(id);
         }
-
-        public List<RealisateurDTO> GetDirectorWithId(int id)
+        public List<ActeurDTO> GetActorByName(string name)
         {
-            return DalSingleton.Singleton().GetDirectorWithId(id);
+            return DalSingleton.Singleton().GetActorByName(name);
         }
-        public List<FilmDTO> GetFilmWithId(int id)
+        public List<FilmDTO> GetFilmByActors(int id)
         {
-            return DalSingleton.Singleton().GetFilmWithId(id);
+            return DalSingleton.Singleton().GetFilmByActors(id);
         }
-        public void SetTrailer(int id, string trailer)
+            public List<RealisateurDTO> GetDirectorById(int id)
+        {
+            return DalSingleton.Singleton().GetDirectorById(id);
+        }
+        public List<FilmDTO> GetFilmById(int id)
+        {
+            return DalSingleton.Singleton().GetFilmById(id);
+        }
+        public List<FilmDTO> GetFilmByName(string name)
+        {
+            return DalSingleton.Singleton().GetFilmByName(name);
+        }
+            public void SetTrailer(int id, string trailer)
         {
             DalSingleton.Singleton().SetTrailer(id, trailer);
         }

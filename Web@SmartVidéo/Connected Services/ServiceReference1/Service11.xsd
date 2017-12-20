@@ -17,59 +17,101 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetGenreWithId">
+  <xs:element name="GetGenreById">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetGenreWithIdResponse">
+  <xs:element name="GetGenreByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetGenreWithIdResult" nillable="true" type="q2:ArrayOfGenreDTO" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetGenreByIdResult" nillable="true" type="q2:ArrayOfGenreDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetActorWithId">
+  <xs:element name="GetActorById">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetActorWithIdResponse">
+  <xs:element name="GetActorByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetActorWithIdResult" nillable="true" type="q3:ArrayOfActeurDTO" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetActorByIdResult" nillable="true" type="q3:ArrayOfActeurDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetDirectorWithId">
+  <xs:element name="GetActorByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActorByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetActorByNameResult" nillable="true" type="q4:ArrayOfActeurDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmByActors">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetDirectorWithIdResponse">
+  <xs:element name="GetFilmByActorsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetDirectorWithIdResult" nillable="true" type="q4:ArrayOfRealisateurDTO" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetFilmByActorsResult" nillable="true" type="q5:ArrayOfFilmDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetFilmWithId">
+  <xs:element name="GetDirectorById">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetFilmWithIdResponse">
+  <xs:element name="GetDirectorByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetFilmWithIdResult" nillable="true" type="q5:ArrayOfFilmDTO" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetDirectorByIdResult" nillable="true" type="q6:ArrayOfRealisateurDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetFilmByIdResult" nillable="true" type="q7:ArrayOfFilmDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/FilmDTOLibrary" minOccurs="0" name="GetFilmByNameResult" nillable="true" type="q8:ArrayOfFilmDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -111,14 +153,14 @@
   <xs:element name="findUserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="findUserResult" nillable="true" type="q6:UtilisateursDTO" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="findUserResult" nillable="true" type="q9:UtilisateursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="user" nillable="true" type="q7:UtilisateursDTO" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="user" nillable="true" type="q10:UtilisateursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -130,7 +172,7 @@
   <xs:element name="InsertUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="user" nillable="true" type="q8:UtilisateursDTO" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="user" nillable="true" type="q11:UtilisateursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
