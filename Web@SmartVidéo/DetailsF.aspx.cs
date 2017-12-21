@@ -25,5 +25,18 @@ namespace Web_SmartVidéo
             }
             film = aC.GetFilm(id);
         }
+
+        protected void ButtonTrailer_Click(object sender, EventArgs e)
+        {
+            if(film.Trailer != null)
+            {
+                System.Diagnostics.Process.Start(film.Trailer);
+            }
+        }
+
+        protected void ButtonLocationFilm_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("LocationFilm.aspx?titre=" + int.Parse(Request.QueryString["titre"]), true);
+        }
     }
 }

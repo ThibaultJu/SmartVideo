@@ -159,6 +159,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="LocationFilm.aspx" />
     <Content Include="DetailsF.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -256,6 +257,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="LocationFilm.aspx.cs">
+      <DependentUpon>LocationFilm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocationFilm.aspx.designer.cs">
+      <DependentUpon>LocationFilm.aspx</DependentUpon>
     </Compile>
     <Compile Include="DetailsF.aspx.cs">
       <DependentUpon>DetailsF.aspx</DependentUpon>

@@ -90,6 +90,7 @@ namespace Web_SmartVidéo
         protected void ButtonRechercheFilm_Click(object sender, EventArgs e)
         {
             listFilms = aC.RechercheFilmbyName(TextBoxIdFilm.Text);
+
         }
         protected void ButtonRechercheActeur_Click(object sender, EventArgs e)
         {

@@ -33,12 +33,23 @@ namespace Web_SmartVidéo
         }
         public List<FilmDTO> RechercheFilmbyName(string name)
         {
-
-            return service.GetFilmByName(name).ToList();
+            List<FilmDTO> list = new List<FilmDTO>();
+            list = service.GetFilmByName(name).ToList();
+            foreach(FilmDTO f in list)
+            {
+                service.InsertHits(f.Id,"Film");
+            }
+            return list;
         }
         public List<ActeurDTO> RechercheActorByName(string name)
         {
-            return service.GetActorByName(name).ToList();
+            List<ActeurDTO> list = new List<ActeurDTO>();
+            list = service.GetActorByName(name).ToList();
+            foreach (ActeurDTO f in list)
+            {
+                service.InsertHits(f.Id, "Acteur");
+            }
+            return list;
         }
         public List<FilmDTO>  RechercheFilmByActors (List<ActeurDTO> listActors)
         {
@@ -69,5 +80,10 @@ namespace Web_SmartVidéo
             return (service.GetFilmById(id)).ToList().First();
 
         }
+        public Boolean InsertLocation(int id,String user,int duree)
+        {
+            return service.InsertLocation(id,user,duree);
+        }
     }
+
 }

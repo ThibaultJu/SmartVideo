@@ -26,5 +26,13 @@ namespace BLLSmartVideoDB
         {
             return DalSingletonSmartVideoDB.Singleton().InsertUser(user);
         }
+        public Boolean InsertHits(int id, string type)
+        {
+            return DalSingletonSmartVideoDB.Singleton().InsertHits(id, type);
+        }
+        public Boolean InsertLocation(int id, String user, int duree)
+        {
+            return DalSingletonSmartVideoDB.Singleton().InsertLocation(id, user, duree);
+        }
     }
 }

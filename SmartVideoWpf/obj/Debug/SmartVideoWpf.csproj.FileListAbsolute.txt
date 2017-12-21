@@ -26,7 +26,6 @@ C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\FilmDTOLibrary.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\DAL.pdb
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\DAL.dll.config
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\bin\Debug\FilmDTOLibrary.pdb
-C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.csprojResolveAssemblyReference.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\MainWindow.g.cs
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\App.g.cs
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf_MarkupCompile.cache

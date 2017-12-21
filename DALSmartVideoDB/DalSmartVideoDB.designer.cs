@@ -30,9 +30,6 @@ namespace DALSmartVideoDB
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertHit(Hit instance);
-    partial void UpdateHit(Hit instance);
-    partial void DeleteHit(Hit instance);
     partial void InsertStatistique(Statistique instance);
     partial void UpdateStatistique(Statistique instance);
     partial void DeleteStatistique(Statistique instance);
@@ -42,6 +39,9 @@ namespace DALSmartVideoDB
     partial void InsertLocationsFilm(LocationsFilm instance);
     partial void UpdateLocationsFilm(LocationsFilm instance);
     partial void DeleteLocationsFilm(LocationsFilm instance);
+    partial void InsertHit(Hit instance);
+    partial void UpdateHit(Hit instance);
+    partial void DeleteHit(Hit instance);
     #endregion
 		
 		public DalSmartVideoDBDataContext() : 
@@ -74,14 +74,6 @@ namespace DALSmartVideoDB
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Hit> Hits
-		{
-			get
-			{
-				return this.GetTable<Hit>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Statistique> Statistiques
 		{
 			get
@@ -105,191 +97,13 @@ namespace DALSmartVideoDB
 				return this.GetTable<LocationsFilm>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hits")]
-	public partial class Hit : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _idHits;
-		
-		private System.Nullable<System.DateTime> _date;
-		
-		private string _type;
-		
-		private System.Nullable<int> _nbRecherche;
-		
-		private string _idRequete;
-		
-		private EntitySet<Statistique> _Statistiques;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidHitsChanging(int value);
-    partial void OnidHitsChanged();
-    partial void OndateChanging(System.Nullable<System.DateTime> value);
-    partial void OndateChanged();
-    partial void OntypeChanging(string value);
-    partial void OntypeChanged();
-    partial void OnnbRechercheChanging(System.Nullable<int> value);
-    partial void OnnbRechercheChanged();
-    partial void OnidRequeteChanging(string value);
-    partial void OnidRequeteChanged();
-    #endregion
-		
-		public Hit()
-		{
-			this._Statistiques = new EntitySet<Statistique>(new Action<Statistique>(this.attach_Statistiques), new Action<Statistique>(this.detach_Statistiques));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idHits", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int idHits
+		public System.Data.Linq.Table<Hit> Hits
 		{
 			get
 			{
-				return this._idHits;
+				return this.GetTable<Hit>();
 			}
-			set
-			{
-				if ((this._idHits != value))
-				{
-					this.OnidHitsChanging(value);
-					this.SendPropertyChanging();
-					this._idHits = value;
-					this.SendPropertyChanged("idHits");
-					this.OnidHitsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="Date")]
-		public System.Nullable<System.DateTime> date
-		{
-			get
-			{
-				return this._date;
-			}
-			set
-			{
-				if ((this._date != value))
-				{
-					this.OndateChanging(value);
-					this.SendPropertyChanging();
-					this._date = value;
-					this.SendPropertyChanged("date");
-					this.OndateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="NChar(10)")]
-		public string type
-		{
-			get
-			{
-				return this._type;
-			}
-			set
-			{
-				if ((this._type != value))
-				{
-					this.OntypeChanging(value);
-					this.SendPropertyChanging();
-					this._type = value;
-					this.SendPropertyChanged("type");
-					this.OntypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nbRecherche", DbType="Int")]
-		public System.Nullable<int> nbRecherche
-		{
-			get
-			{
-				return this._nbRecherche;
-			}
-			set
-			{
-				if ((this._nbRecherche != value))
-				{
-					this.OnnbRechercheChanging(value);
-					this.SendPropertyChanging();
-					this._nbRecherche = value;
-					this.SendPropertyChanged("nbRecherche");
-					this.OnnbRechercheChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idRequete", DbType="NChar(10) NOT NULL", CanBeNull=false)]
-		public string idRequete
-		{
-			get
-			{
-				return this._idRequete;
-			}
-			set
-			{
-				if ((this._idRequete != value))
-				{
-					this.OnidRequeteChanging(value);
-					this.SendPropertyChanging();
-					this._idRequete = value;
-					this.SendPropertyChanged("idRequete");
-					this.OnidRequeteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hit_Statistique", Storage="_Statistiques", ThisKey="idHits", OtherKey="idHits")]
-		public EntitySet<Statistique> Statistiques
-		{
-			get
-			{
-				return this._Statistiques;
-			}
-			set
-			{
-				this._Statistiques.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Statistiques(Statistique entity)
-		{
-			this.SendPropertyChanging();
-			entity.Hit = this;
-		}
-		
-		private void detach_Statistiques(Statistique entity)
-		{
-			this.SendPropertyChanging();
-			entity.Hit = null;
 		}
 	}
 	
@@ -826,6 +640,192 @@ namespace DALSmartVideoDB
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hits")]
+	public partial class Hit : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idHits;
+		
+		private System.Nullable<System.DateTime> _date;
+		
+		private string _type;
+		
+		private System.Nullable<int> _nbRecherche;
+		
+		private int _idRequete;
+		
+		private EntitySet<Statistique> _Statistiques;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidHitsChanging(int value);
+    partial void OnidHitsChanged();
+    partial void OndateChanging(System.Nullable<System.DateTime> value);
+    partial void OndateChanged();
+    partial void OntypeChanging(string value);
+    partial void OntypeChanged();
+    partial void OnnbRechercheChanging(System.Nullable<int> value);
+    partial void OnnbRechercheChanged();
+    partial void OnidRequeteChanging(int value);
+    partial void OnidRequeteChanged();
+    #endregion
+		
+		public Hit()
+		{
+			this._Statistiques = new EntitySet<Statistique>(new Action<Statistique>(this.attach_Statistiques), new Action<Statistique>(this.detach_Statistiques));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idHits", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idHits
+		{
+			get
+			{
+				return this._idHits;
+			}
+			set
+			{
+				if ((this._idHits != value))
+				{
+					this.OnidHitsChanging(value);
+					this.SendPropertyChanging();
+					this._idHits = value;
+					this.SendPropertyChanged("idHits");
+					this.OnidHitsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="Date")]
+		public System.Nullable<System.DateTime> date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this.OndateChanging(value);
+					this.SendPropertyChanging();
+					this._date = value;
+					this.SendPropertyChanged("date");
+					this.OndateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="NChar(10)")]
+		public string type
+		{
+			get
+			{
+				return this._type;
+			}
+			set
+			{
+				if ((this._type != value))
+				{
+					this.OntypeChanging(value);
+					this.SendPropertyChanging();
+					this._type = value;
+					this.SendPropertyChanged("type");
+					this.OntypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nbRecherche", DbType="Int")]
+		public System.Nullable<int> nbRecherche
+		{
+			get
+			{
+				return this._nbRecherche;
+			}
+			set
+			{
+				if ((this._nbRecherche != value))
+				{
+					this.OnnbRechercheChanging(value);
+					this.SendPropertyChanging();
+					this._nbRecherche = value;
+					this.SendPropertyChanged("nbRecherche");
+					this.OnnbRechercheChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idRequete", DbType="Int NOT NULL")]
+		public int idRequete
+		{
+			get
+			{
+				return this._idRequete;
+			}
+			set
+			{
+				if ((this._idRequete != value))
+				{
+					this.OnidRequeteChanging(value);
+					this.SendPropertyChanging();
+					this._idRequete = value;
+					this.SendPropertyChanged("idRequete");
+					this.OnidRequeteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hit_Statistique", Storage="_Statistiques", ThisKey="idHits", OtherKey="idHits")]
+		public EntitySet<Statistique> Statistiques
+		{
+			get
+			{
+				return this._Statistiques;
+			}
+			set
+			{
+				this._Statistiques.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Statistiques(Statistique entity)
+		{
+			this.SendPropertyChanging();
+			entity.Hit = this;
+		}
+		
+		private void detach_Statistiques(Statistique entity)
+		{
+			this.SendPropertyChanging();
+			entity.Hit = null;
 		}
 	}
 }
