@@ -559,6 +559,18 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertUser", ReplyAction="http://tempuri.org/IService1/InsertUserResponse")]
         System.Threading.Tasks.Task<bool> InsertUserAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertHits", ReplyAction="http://tempuri.org/IService1/InsertHitsResponse")]
+        bool InsertHits(int id, string type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertHits", ReplyAction="http://tempuri.org/IService1/InsertHitsResponse")]
+        System.Threading.Tasks.Task<bool> InsertHitsAsync(int id, string type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertLocation", ReplyAction="http://tempuri.org/IService1/InsertLocationResponse")]
+        bool InsertLocation(int id, string user, int duree);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertLocation", ReplyAction="http://tempuri.org/IService1/InsertLocationResponse")]
+        System.Threading.Tasks.Task<bool> InsertLocationAsync(int id, string user, int duree);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -690,6 +702,22 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> InsertUserAsync(Web_SmartVidéo.ServiceReference1.UtilisateursDTO user) {
             return base.Channel.InsertUserAsync(user);
+        }
+        
+        public bool InsertHits(int id, string type) {
+            return base.Channel.InsertHits(id, type);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertHitsAsync(int id, string type) {
+            return base.Channel.InsertHitsAsync(id, type);
+        }
+        
+        public bool InsertLocation(int id, string user, int duree) {
+            return base.Channel.InsertLocation(id, user, duree);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertLocationAsync(int id, string user, int duree) {
+            return base.Channel.InsertLocationAsync(id, user, duree);
         }
     }
 }

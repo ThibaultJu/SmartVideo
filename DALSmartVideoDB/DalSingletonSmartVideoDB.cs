@@ -66,7 +66,7 @@ namespace DALSmartVideoDB
             if (user.Any())
             {
                 UtilisateursDTO tmp = (UtilisateursDTO)user.First();
-                return tmp.Pseudo;
+                return tmp.Email;
             }
             else
                 return null;
@@ -102,6 +102,75 @@ namespace DALSmartVideoDB
                 Console.WriteLine(e);
                 return false;
             }
+        }
+
+        public Boolean InsertHits(int id,string type)
+        {
+            DateTime DateTime = DateTime.Today;
+            var query = from f in _context.Hits where f.idRequete == id && f.date == DateTime && f.type == type select f;
+            int cpt = 0;
+            foreach (Hit f in query)
+            {
+                f.nbRecherche = f.nbRecherche + 1;
+                cpt++;
+            }
+            _context.SubmitChanges();
+            if (cpt==0)
+            {
+                Hit hit = new Hit();
+                hit.idRequete = id;
+                hit.type = type;
+                hit.date = DateTime;
+                hit.nbRecherche = 1;
+                _context.Hits.InsertOnSubmit(hit);
+                try
+                {
+                    _context.SubmitChanges();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return false;
+                }
+            }
+            return false;
+        }
+        public Boolean InsertLocation(int id,String user,int duree)
+        {
+            DateTime DateTime = DateTime.Today;
+            var query = from f in _context.LocationsFilms where f.idFilm == id && f.DateFin > DateTime select f;
+            int count = _context.LocationsFilms.Count();
+            int cpt = 0;
+            foreach (LocationsFilm f in query)
+            {
+                //pas ok car déja en cours de location
+                cpt++;
+                return false;
+
+            }
+            if (cpt == 0)
+            {
+                //ok
+                LocationsFilm Loc = new LocationsFilm();
+                Loc.idLocationsFilm = count +1;
+                Loc.idFilm = id;
+                Loc.Utilisateur = user; 
+                Loc.DateDébut = DateTime;
+                Loc.DateFin = DateTime.AddMonths(duree);
+                _context.LocationsFilms.InsertOnSubmit(Loc);
+                try
+                {
+                    _context.SubmitChanges();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

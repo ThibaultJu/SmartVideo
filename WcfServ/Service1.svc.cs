@@ -75,5 +75,13 @@ namespace WcfServ
         {
             return BllSmart.InsertUser(user);
         }
+        public Boolean InsertHits(int id, string type)
+        {
+            return BllSmart.InsertHits(id, type);
+        }
+        public Boolean InsertLocation(int id, String user, int duree)
+        {
+            return BllSmart.InsertLocation(id, user, duree);
+        }
     }
 }

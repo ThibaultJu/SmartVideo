@@ -46,7 +46,10 @@
 							<%=rea.Name %><%           
 							i++;
 						}%>
-        </p><br />
+        </p>
+		<asp:Button ID="ButtonTrailer" runat="server" Text="Voir trailer" OnClick="ButtonTrailer_Click" />
+		<asp:Button ID="ButtonLocationFilm" runat="server" Text="Location du Film" OnClick="ButtonLocationFilm_Click"/>
+		<br />
 
     </div>
 </asp:Content>

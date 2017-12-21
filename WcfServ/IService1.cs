@@ -54,6 +54,12 @@ namespace WcfServ
 
         [OperationContract]
         Boolean InsertUser(UtilisateursDTO user);
+
+        [OperationContract]
+        Boolean InsertHits(int id, string type);
+
+        [OperationContract]
+        Boolean InsertLocation(int id, String user, int duree);
     }
 
 
