@@ -3,4 +3,3 @@ C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoDBDTO\bin\Debug\SmartVideoDBDTO.p
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoDBDTO\obj\Debug\SmartVideoDBDTO.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoDBDTO\obj\Debug\SmartVideoDBDTO.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoDBDTO\obj\Debug\SmartVideoDBDTO.pdb
-C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoDBDTO\obj\Debug\SmartVideoDBDTO.csprojResolveAssemblyReference.cache

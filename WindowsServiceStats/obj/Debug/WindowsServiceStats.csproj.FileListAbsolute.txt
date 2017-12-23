@@ -1,0 +1,7 @@
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\WindowsServiceStats.exe.config
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\WindowsServiceStats.exe
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\WindowsServiceStats.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.csprojResolveAssemblyReference.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.csproj.CoreCompileInputs.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.exe
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.pdb

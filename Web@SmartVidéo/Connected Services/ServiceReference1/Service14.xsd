@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DALSmartVideoDB" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DALSmartVideoDB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLocationsFilm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationsFilm" nillable="true" type="tns:LocationsFilm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationsFilm" nillable="true" type="tns:ArrayOfLocationsFilm" />
+  <xs:complexType name="LocationsFilm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateDébut" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Utilisateur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Utilisateur1" nillable="true" type="tns:Utilisateur" />
+      <xs:element minOccurs="0" name="idFilm" type="xs:int" />
+      <xs:element minOccurs="0" name="idLocationsFilm" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationsFilm" nillable="true" type="tns:LocationsFilm" />
+  <xs:complexType name="Utilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Carte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationsFilms" nillable="true" type="tns:ArrayOfLocationsFilm" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pseudo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Utilisateur" nillable="true" type="tns:Utilisateur" />
+</xs:schema>
