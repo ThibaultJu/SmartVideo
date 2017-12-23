@@ -98,6 +98,12 @@
   <wsdl:message name="IService1_InsertLocation_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertLocationResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLocation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLocationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetFilms">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFilms" message="tns:IService1_GetFilms_InputMessage" />
@@ -158,6 +164,10 @@
     <wsdl:operation name="InsertLocation">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertLocation" message="tns:IService1_InsertLocation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertLocationResponse" message="tns:IService1_InsertLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getLocation" message="tns:IService1_getLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getLocationResponse" message="tns:IService1_getLocation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -290,6 +300,15 @@
     </wsdl:operation>
     <wsdl:operation name="InsertLocation">
       <soap:operation soapAction="http://tempuri.org/IService1/InsertLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocation">
+      <soap:operation soapAction="http://tempuri.org/IService1/getLocation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

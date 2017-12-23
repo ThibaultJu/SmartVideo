@@ -1,4 +1,5 @@
 ﻿using DALSmartVideoDB;
+using FilmDTOLibrary;
 using SmartVideoDBDTO;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,10 @@ namespace BLLSmartVideoDB
         public Boolean InsertLocation(int id, String user, int duree)
         {
             return DalSingletonSmartVideoDB.Singleton().InsertLocation(id, user, duree);
+        }
+        public List<LocationDTO> getLocation(string username)
+        {
+            return DalSingletonSmartVideoDB.Singleton().getLocation(username);
         }
     }
 }

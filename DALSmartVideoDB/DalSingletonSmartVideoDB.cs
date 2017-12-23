@@ -1,4 +1,5 @@
-﻿using SmartVideoDBDTO;
+﻿using FilmDTOLibrary;
+using SmartVideoDBDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -139,7 +140,7 @@ namespace DALSmartVideoDB
         public Boolean InsertLocation(int id,String user,int duree)
         {
             DateTime DateTime = DateTime.Today;
-            var query = from f in _context.LocationsFilms where f.idFilm == id && f.DateFin > DateTime select f;
+            var query = from f in _context.LocationsFilms where f.idFilm == id select f;
             int count = _context.LocationsFilms.Count();
             int cpt = 0;
             foreach (LocationsFilm f in query)
@@ -172,5 +173,26 @@ namespace DALSmartVideoDB
             }
             return true;
         }
-    }
+
+        public List<LocationDTO> getLocation(string username)
+        {
+            string query = "SELECT * from LocationsFilms WHERE Utilisateur = '" + username + "' ;";
+            try
+            {
+                List<LocationDTO> list = _context.ExecuteQuery<LocationDTO>(query).Select(l => new LocationDTO
+                {
+                    Username = l.Username,
+                    IdFilm = l.IdFilm,
+                    DateDebut = l.DateDebut,
+                    DateFin = l.DateFin
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " impossible d'afficher les résultats.");
+                return new List<LocationDTO>();
+            }
+        }
+
 }

@@ -84,6 +84,10 @@ namespace Web_SmartVidéo
         {
             return service.InsertLocation(id,user,duree);
         }
+        public List<LocationDTO> GetLocation(string user)
+        {
+            return service.getLocation(user).ToList();
+        }
     }
 
 }

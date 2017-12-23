@@ -478,6 +478,99 @@ namespace Web_SmartVidéo.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LocationDTO", Namespace="http://schemas.datacontract.org/2004/07/FilmDTOLibrary")]
+    [System.SerializableAttribute()]
+    public partial class LocationDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateDebutField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdFilmField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateDebut {
+            get {
+                return this.DateDebutField;
+            }
+            set {
+                if ((this.DateDebutField.Equals(value) != true)) {
+                    this.DateDebutField = value;
+                    this.RaisePropertyChanged("DateDebut");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateFin {
+            get {
+                return this.DateFinField;
+            }
+            set {
+                if ((this.DateFinField.Equals(value) != true)) {
+                    this.DateFinField = value;
+                    this.RaisePropertyChanged("DateFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdFilm {
+            get {
+                return this.IdFilmField;
+            }
+            set {
+                if ((this.IdFilmField.Equals(value) != true)) {
+                    this.IdFilmField = value;
+                    this.RaisePropertyChanged("IdFilm");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -571,6 +664,12 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertLocation", ReplyAction="http://tempuri.org/IService1/InsertLocationResponse")]
         System.Threading.Tasks.Task<bool> InsertLocationAsync(int id, string user, int duree);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLocation", ReplyAction="http://tempuri.org/IService1/getLocationResponse")]
+        Web_SmartVidéo.ServiceReference1.LocationDTO[] getLocation(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLocation", ReplyAction="http://tempuri.org/IService1/getLocationResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.LocationDTO[]> getLocationAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -718,6 +817,14 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> InsertLocationAsync(int id, string user, int duree) {
             return base.Channel.InsertLocationAsync(id, user, duree);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.LocationDTO[] getLocation(string username) {
+            return base.Channel.getLocation(username);
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.LocationDTO[]> getLocationAsync(string username) {
+            return base.Channel.getLocationAsync(username);
         }
     }
 }

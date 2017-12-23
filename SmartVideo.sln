@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.0
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C3EDA6FF-E680-408C-8C88-D615DA96A1B4}"
 EndProject
@@ -31,6 +31,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartVideoDBDTO", "SmartVideoDBDTO\SmartVideoDBDTO.csproj", "{58145F3A-691D-427C-A4C4-BF7B0F820001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLLSmartVideoDB", "BLLSmartVideoDB\BLLSmartVideoDB.csproj", "{3E7E6970-988C-4701-B9A9-145E31EC6549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceStats", "WindowsServiceStats\WindowsServiceStats.csproj", "{0F254FD7-F889-4547-A584-67019FB7EF86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,10 @@ Global
 		{3E7E6970-988C-4701-B9A9-145E31EC6549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E7E6970-988C-4701-B9A9-145E31EC6549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E7E6970-988C-4701-B9A9-145E31EC6549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F254FD7-F889-4547-A584-67019FB7EF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F254FD7-F889-4547-A584-67019FB7EF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F254FD7-F889-4547-A584-67019FB7EF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F254FD7-F889-4547-A584-67019FB7EF86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

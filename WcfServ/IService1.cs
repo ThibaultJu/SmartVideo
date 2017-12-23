@@ -60,6 +60,9 @@ namespace WcfServ
 
         [OperationContract]
         Boolean InsertLocation(int id, String user, int duree);
+
+        [OperationContract]
+        List<LocationDTO> getLocation(string username);
     }
 
 

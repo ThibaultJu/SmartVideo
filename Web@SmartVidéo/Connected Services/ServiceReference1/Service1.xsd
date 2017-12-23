@@ -60,4 +60,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RealisateurDTO" nillable="true" type="tns:RealisateurDTO" />
+  <xs:complexType name="ArrayOfLocationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationDTO" nillable="true" type="tns:LocationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationDTO" nillable="true" type="tns:ArrayOfLocationDTO" />
+  <xs:complexType name="LocationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateDebut" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdFilm" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationDTO" nillable="true" type="tns:LocationDTO" />
 </xs:schema>

@@ -83,5 +83,9 @@ namespace WcfServ
         {
             return BllSmart.InsertLocation(id, user, duree);
         }
+        public List<LocationDTO> getLocation(string username)
+        {
+            return BllSmart.getLocation(username);
+        }
     }
 }
