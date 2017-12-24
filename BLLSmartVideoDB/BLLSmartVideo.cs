@@ -43,6 +43,10 @@ namespace BLLSmartVideoDB
         {
             DalSingletonSmartVideoDB.Singleton().setStatistiques(type, date);
         }
+        public List<StatistiquesDTO> getStatistiques()
+        {
+            return DalSingletonSmartVideoDB.Singleton().getStatistiques();
+        }
 
     }
 }

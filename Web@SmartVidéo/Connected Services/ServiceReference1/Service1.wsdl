@@ -104,11 +104,11 @@
   <wsdl:message name="IService1_getLocation_OutputMessage">
     <wsdl:part name="parameters" element="tns:getLocationResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_setStatistiques_InputMessage">
-    <wsdl:part name="parameters" element="tns:setStatistiques" />
+  <wsdl:message name="IService1_getStatistiques_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStatistiques" />
   </wsdl:message>
-  <wsdl:message name="IService1_setStatistiques_OutputMessage">
-    <wsdl:part name="parameters" element="tns:setStatistiquesResponse" />
+  <wsdl:message name="IService1_getStatistiques_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatistiquesResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetFilms">
@@ -175,9 +175,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getLocation" message="tns:IService1_getLocation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getLocationResponse" message="tns:IService1_getLocation_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="setStatistiques">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setStatistiques" message="tns:IService1_setStatistiques_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setStatistiquesResponse" message="tns:IService1_setStatistiques_OutputMessage" />
+    <wsdl:operation name="getStatistiques">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getStatistiques" message="tns:IService1_getStatistiques_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getStatistiquesResponse" message="tns:IService1_getStatistiques_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -326,8 +326,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="setStatistiques">
-      <soap:operation soapAction="http://tempuri.org/IService1/setStatistiques" style="document" />
+    <wsdl:operation name="getStatistiques">
+      <soap:operation soapAction="http://tempuri.org/IService1/getStatistiques" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

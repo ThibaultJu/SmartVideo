@@ -195,9 +195,9 @@ namespace DALSmartVideoDB
             }
         }
 
-        public void setStatistiques(string type,DateTime date)
+        public void setStatistiques(string type, DateTime date)
         {
-            string query = "select TOP (3) * from Hits where type ='" + type + "' and date = '" + date.ToString("yyyy-MM-dd")  + "'order by nbRecherche desc;";
+            string query = "select TOP (3) * from Hits where type ='" + type + "' and date = '" + date.ToString("yyyy-MM-dd") + "'order by nbRecherche desc;";
             try
             {
                 List<HitsDTO> list = _context.ExecuteQuery<HitsDTO>(query).Select(l => new HitsDTO
@@ -208,12 +208,12 @@ namespace DALSmartVideoDB
                     NbRecherche = l.NbRecherche,
                     Type = l.Type
                 }).ToList();
-                foreach(HitsDTO hit in list)
+                foreach (HitsDTO hit in list)
                 {
                     //insert Stat
                     int count = _context.Statistiques.Count();
                     Statistique stat = new Statistique();
-                    stat.idStatistiques = count +1;
+                    stat.idStatistiques = count + 1;
                     stat.idRequete = hit.IdRequete;
                     stat.date = hit.Date;
                     stat.nbRecherche = hit.NbRecherche;
@@ -235,6 +235,27 @@ namespace DALSmartVideoDB
             }
 
         }
-    }
-
+        public List<StatistiquesDTO> getStatistiques()
+        {
+            DateTime date = DateTime.Today;
+            string query = "select* from Statistiques where date = '" + date.ToString("yyyy-MM-dd") + "'order by type, nbRecherche desc";
+            try
+            {
+                List<StatistiquesDTO> list = _context.ExecuteQuery<StatistiquesDTO>(query).Select(l => new StatistiquesDTO
+                {
+                    IdStats = l.IdStats,
+                    Date = l.Date,
+                    Type = l.Type,
+                    NbRecherche = l.NbRecherche,
+                    IdRequete = l.IdRequete
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " impossible d'afficher les résultats.");
+                return new List<StatistiquesDTO>();
+            }
+        }
+    }    
 }

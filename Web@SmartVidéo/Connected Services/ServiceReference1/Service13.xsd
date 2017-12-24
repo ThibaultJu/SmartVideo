@@ -9,20 +9,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UtilisateursDTO" nillable="true" type="tns:UtilisateursDTO" />
-  <xs:complexType name="ArrayOfHitsDTO">
+  <xs:complexType name="ArrayOfStatistiquesDTO">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="HitsDTO" nillable="true" type="tns:HitsDTO" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatistiquesDTO" nillable="true" type="tns:StatistiquesDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfHitsDTO" nillable="true" type="tns:ArrayOfHitsDTO" />
-  <xs:complexType name="HitsDTO">
+  <xs:element name="ArrayOfStatistiquesDTO" nillable="true" type="tns:ArrayOfStatistiquesDTO" />
+  <xs:complexType name="StatistiquesDTO">
     <xs:sequence>
       <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="IdHits" type="xs:int" />
       <xs:element minOccurs="0" name="IdRequete" type="xs:int" />
+      <xs:element minOccurs="0" name="IdStats" type="xs:int" />
       <xs:element minOccurs="0" name="NbRecherche" type="xs:int" />
       <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="HitsDTO" nillable="true" type="tns:HitsDTO" />
+  <xs:element name="StatistiquesDTO" nillable="true" type="tns:StatistiquesDTO" />
 </xs:schema>

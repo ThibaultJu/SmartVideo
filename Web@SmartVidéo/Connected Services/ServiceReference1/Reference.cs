@@ -573,9 +573,9 @@ namespace Web_SmartVidéo.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HitsDTO", Namespace="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StatistiquesDTO", Namespace="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO")]
     [System.SerializableAttribute()]
-    public partial class HitsDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class StatistiquesDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -584,10 +584,10 @@ namespace Web_SmartVidéo.ServiceReference1 {
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdHitsField;
+        private int IdRequeteField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdRequeteField;
+        private int IdStatsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int NbRechercheField;
@@ -619,19 +619,6 @@ namespace Web_SmartVidéo.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IdHits {
-            get {
-                return this.IdHitsField;
-            }
-            set {
-                if ((this.IdHitsField.Equals(value) != true)) {
-                    this.IdHitsField = value;
-                    this.RaisePropertyChanged("IdHits");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int IdRequete {
             get {
                 return this.IdRequeteField;
@@ -640,6 +627,19 @@ namespace Web_SmartVidéo.ServiceReference1 {
                 if ((this.IdRequeteField.Equals(value) != true)) {
                     this.IdRequeteField = value;
                     this.RaisePropertyChanged("IdRequete");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdStats {
+            get {
+                return this.IdStatsField;
+            }
+            set {
+                if ((this.IdStatsField.Equals(value) != true)) {
+                    this.IdStatsField = value;
+                    this.RaisePropertyChanged("IdStats");
                 }
             }
         }
@@ -780,11 +780,11 @@ namespace Web_SmartVidéo.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLocation", ReplyAction="http://tempuri.org/IService1/getLocationResponse")]
         System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.LocationDTO[]> getLocationAsync(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/setStatistiques", ReplyAction="http://tempuri.org/IService1/setStatistiquesResponse")]
-        Web_SmartVidéo.ServiceReference1.HitsDTO[] setStatistiques(string type, System.DateTime date);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getStatistiques", ReplyAction="http://tempuri.org/IService1/getStatistiquesResponse")]
+        Web_SmartVidéo.ServiceReference1.StatistiquesDTO[] getStatistiques();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/setStatistiques", ReplyAction="http://tempuri.org/IService1/setStatistiquesResponse")]
-        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.HitsDTO[]> setStatistiquesAsync(string type, System.DateTime date);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getStatistiques", ReplyAction="http://tempuri.org/IService1/getStatistiquesResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.StatistiquesDTO[]> getStatistiquesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -942,12 +942,12 @@ namespace Web_SmartVidéo.ServiceReference1 {
             return base.Channel.getLocationAsync(username);
         }
         
-        public Web_SmartVidéo.ServiceReference1.HitsDTO[] setStatistiques(string type, System.DateTime date) {
-            return base.Channel.setStatistiques(type, date);
+        public Web_SmartVidéo.ServiceReference1.StatistiquesDTO[] getStatistiques() {
+            return base.Channel.getStatistiques();
         }
         
-        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.HitsDTO[]> setStatistiquesAsync(string type, System.DateTime date) {
-            return base.Channel.setStatistiquesAsync(type, date);
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.StatistiquesDTO[]> getStatistiquesAsync() {
+            return base.Channel.getStatistiquesAsync();
         }
     }
 }

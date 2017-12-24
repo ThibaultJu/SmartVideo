@@ -9,15 +9,17 @@ using System.Web.UI.WebControls;
 
 namespace Web_SmartVidéo
 {
-    public partial class ShowLocation : Page
+    public partial class Statistiques : Page
     {
         public AuthenticationControler aC;
-        public List<LocationDTO> listLocations;
+        public List<StatistiquesDTO> listStatistiques;
         public FilmDTO film;
+        public ActeurDTO actor;
         protected void Page_Load(object sender, EventArgs e)
         {
             aC = new AuthenticationControler();
-            listLocations = new List<LocationDTO>();
+            listStatistiques = new List<StatistiquesDTO>();
+            actor = new ActeurDTO();
             film = new FilmDTO();
             if (Session["Log"] != null && Session["LogOK"] != null)
             {
@@ -25,11 +27,7 @@ namespace Web_SmartVidéo
                 link.InnerText = (String)Session["Log"];
                 link.HRef = (String)Session["LogOK"];
             }
-            if(Session["Log"].Equals("Login"))
-            {
-                Server.Transfer("Default.aspx", true);
-            }
-            listLocations = aC.GetLocation((String)Session["Log"]);
+            listStatistiques = aC.getStatistiques();
         }
 
     }

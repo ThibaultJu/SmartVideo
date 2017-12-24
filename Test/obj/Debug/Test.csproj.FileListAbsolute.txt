@@ -30,3 +30,4 @@ C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.csproj.GenerateResource
 C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.exe
 C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
