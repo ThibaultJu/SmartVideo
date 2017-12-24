@@ -39,5 +39,10 @@ namespace BLLSmartVideoDB
         {
             return DalSingletonSmartVideoDB.Singleton().getLocation(username);
         }
+        public void setStatistiques(string type, DateTime date)
+        {
+            DalSingletonSmartVideoDB.Singleton().setStatistiques(type, date);
+        }
+
     }
 }

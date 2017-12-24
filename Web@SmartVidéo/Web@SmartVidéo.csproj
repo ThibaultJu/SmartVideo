@@ -207,6 +207,9 @@
     <Content Include="Connected Services\ServiceReference1\Web_SmartVidéo.ServiceReference1.LocationDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\Web_SmartVidéo.ServiceReference1.HitsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="LoginAddUser.aspx" />
     <Content Include="Login.aspx" />

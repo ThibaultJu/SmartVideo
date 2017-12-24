@@ -18,21 +18,21 @@ namespace Web_SmartVidéo
         private int index = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-                listFilms = new List<FilmDTO>();
-                aC = new AuthenticationControler();
-                if (Session["Log"] != null && Session["LogOK"] != null)
-                {
-                    HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
-                    link.InnerText = (String)Session["Log"];
-                    link.HRef = (String)Session["LogOK"];
-                }
-                if(Session["Index"] != null)
-                {
-                    index = (int)Session["Index"];
-                }
+            listFilms = new List<FilmDTO>();
+            aC = new AuthenticationControler();
+            //aC.setStatistiques();
+            if (Session["Log"] != null && Session["LogOK"] != null)
+            {
+                HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
+                link.InnerText = (String)Session["Log"];
+                link.HRef = (String)Session["LogOK"];
+            }
+            if(Session["Index"] != null)
+            {
+                index = (int)Session["Index"];
+            }
                 
-                listFilms = aC.LoadFilm(index, 5);
-
+            listFilms = aC.LoadFilm(index, 5);
 
         }
         protected void Button1_Click(object sender, EventArgs e)

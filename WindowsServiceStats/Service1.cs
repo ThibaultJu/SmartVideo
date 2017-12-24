@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLLSmartVideoDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,12 +15,14 @@ namespace WindowsServiceStats
     public partial class Service1 : ServiceBase
     {
         System.Timers.Timer _timer;
+        BLLSmartVideo bllSmart;
         DateTime _scheduleTime;
         public Service1()
         {
             InitializeComponent();
+            bllSmart = new BLLSmartVideo();
             _timer = new System.Timers.Timer();
-            _scheduleTime = DateTime.Today.AddHours(16).AddMinutes(35);
+            _scheduleTime = DateTime.Today.AddHours(16).AddMinutes(0);
         }
         private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
@@ -28,7 +31,8 @@ namespace WindowsServiceStats
             {
                 TimeSpan span = now - DateTime.Now;
                 _scheduleTime = _scheduleTime.AddMilliseconds(span.Milliseconds).AddDays(1);
-                
+                bllSmart.setStatistiques("Film", DateTime.Today);
+                bllSmart.setStatistiques("Acteur", DateTime.Today);
             }
           
         }

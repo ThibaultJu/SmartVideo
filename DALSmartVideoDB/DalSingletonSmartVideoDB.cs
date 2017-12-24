@@ -37,7 +37,7 @@ namespace DALSmartVideoDB
 
         public UtilisateursDTO findUser(string E)
         {
-            var query = "SELECT * FROM Utilisateurs where Email = '" + E +"';";
+            var query = "SELECT * FROM Utilisateurs where Email = '" + E + "';";
             var user = _context.ExecuteQuery<UtilisateursDTO>(query).Select(f => new UtilisateursDTO
             {
                 Email = f.Email,
@@ -105,7 +105,7 @@ namespace DALSmartVideoDB
             }
         }
 
-        public Boolean InsertHits(int id,string type)
+        public Boolean InsertHits(int id, string type)
         {
             DateTime DateTime = DateTime.Today;
             var query = from f in _context.Hits where f.idRequete == id && f.date == DateTime && f.type == type select f;
@@ -116,7 +116,7 @@ namespace DALSmartVideoDB
                 cpt++;
             }
             _context.SubmitChanges();
-            if (cpt==0)
+            if (cpt == 0)
             {
                 Hit hit = new Hit();
                 hit.idRequete = id;
@@ -137,7 +137,7 @@ namespace DALSmartVideoDB
             }
             return false;
         }
-        public Boolean InsertLocation(int id,String user,int duree)
+        public Boolean InsertLocation(int id, String user, int duree)
         {
             DateTime DateTime = DateTime.Today;
             var query = from f in _context.LocationsFilms where f.idFilm == id select f;
@@ -154,9 +154,9 @@ namespace DALSmartVideoDB
             {
                 //ok
                 LocationsFilm Loc = new LocationsFilm();
-                Loc.idLocationsFilm = count +1;
+                Loc.idLocationsFilm = count + 1;
                 Loc.idFilm = id;
-                Loc.Utilisateur = user; 
+                Loc.Utilisateur = user;
                 Loc.DateDébut = DateTime;
                 Loc.DateFin = DateTime.AddMonths(duree);
                 _context.LocationsFilms.InsertOnSubmit(Loc);
@@ -194,5 +194,47 @@ namespace DALSmartVideoDB
                 return new List<LocationDTO>();
             }
         }
+
+        public void setStatistiques(string type,DateTime date)
+        {
+            string query = "select TOP (3) * from Hits where type ='" + type + "' and date = '" + date.ToString("yyyy-MM-dd")  + "'order by nbRecherche desc;";
+            try
+            {
+                List<HitsDTO> list = _context.ExecuteQuery<HitsDTO>(query).Select(l => new HitsDTO
+                {
+                    IdHits = l.IdHits,
+                    Date = l.Date,
+                    IdRequete = l.IdRequete,
+                    NbRecherche = l.NbRecherche,
+                    Type = l.Type
+                }).ToList();
+                foreach(HitsDTO hit in list)
+                {
+                    //insert Stat
+                    int count = _context.Statistiques.Count();
+                    Statistique stat = new Statistique();
+                    stat.idStatistiques = count +1;
+                    stat.idRequete = hit.IdRequete;
+                    stat.date = hit.Date;
+                    stat.nbRecherche = hit.NbRecherche;
+                    stat.type = hit.Type;
+                    _context.Statistiques.InsertOnSubmit(stat);
+                    try
+                    {
+                        _context.SubmitChanges();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " impossible d'afficher les résultats.");
+            }
+
+        }
+    }
 
 }
