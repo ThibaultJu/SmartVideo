@@ -24,6 +24,7 @@
 						{%>
 								<%this.actor = this.aC.RechercheActorByID(stats.IdRequete); %>
 								<p>Acteur : <%=actor.Name %></p><br />
+								<p>Personnage : <%=actor.Character %></p><br />
 								<p>Nombre de recherches effectuées : <%=stats.NbRecherche %></p><br />
 								<br />
 								<br />

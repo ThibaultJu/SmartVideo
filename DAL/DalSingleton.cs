@@ -84,7 +84,8 @@ namespace DAL
 
         public List<ActeurDTO> GetActorById(int id)
         {
-            var query = "SELECT Distinct Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
+            //var query = "SELECT Distinct Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
+            var query = "SELECT * FROM Actor WHERE id = " + id + ";";
             try
             {
                 var list = _context.ExecuteQuery<ActeurDTO>(query).Select(a => new ActeurDTO

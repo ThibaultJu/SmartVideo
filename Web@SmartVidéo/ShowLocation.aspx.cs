@@ -24,12 +24,15 @@ namespace Web_SmartVidéo
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");
                 link.InnerText = (String)Session["Log"];
                 link.HRef = (String)Session["LogOK"];
+                if (Session["Log"].Equals("Login"))
+                {
+                    Server.Transfer("Default.aspx", true);
+                }
+                listLocations = aC.GetLocation((String)Session["Log"]);
             }
-            if(Session["Log"].Equals("Login"))
-            {
+            else
                 Server.Transfer("Default.aspx", true);
-            }
-            listLocations = aC.GetLocation((String)Session["Log"]);
+
         }
 
     }
