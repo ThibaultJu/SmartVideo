@@ -228,4 +228,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getStatistiques">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStatistiquesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO" minOccurs="0" name="getStatistiquesResult" nillable="true" type="q13:ArrayOfStatistiquesDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

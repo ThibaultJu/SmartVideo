@@ -63,6 +63,10 @@ namespace WcfServ
 
         [OperationContract]
         List<LocationDTO> getLocation(string username);
+
+        [OperationContract]
+        List<StatistiquesDTO> getStatistiques();
+
     }
 
 

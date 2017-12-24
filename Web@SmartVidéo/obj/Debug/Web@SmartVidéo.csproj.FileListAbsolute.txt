@@ -43,7 +43,7 @@ C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\Microsoft.AI.Dependency
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\Microsoft.AI.Web.xml
-C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.csprojResolveAssemblyReference.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.csprojResolveAssemblyReference.cache

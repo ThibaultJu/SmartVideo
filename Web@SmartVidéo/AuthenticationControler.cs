@@ -51,6 +51,11 @@ namespace Web_SmartVidéo
             }
             return list;
         }
+        public ActeurDTO RechercheActorByID(int id)
+        {
+            return (service.GetActorById(id).ToList()).First();
+        }
+
         public List<FilmDTO>  RechercheFilmByActors (List<ActeurDTO> listActors)
         {
             List<FilmDTO> ListFilms = new List<FilmDTO>();
@@ -87,6 +92,10 @@ namespace Web_SmartVidéo
         public List<LocationDTO> GetLocation(string user)
         {
             return service.getLocation(user).ToList();
+        }
+        public List<StatistiquesDTO> getStatistiques()
+        {
+            return service.getStatistiques().ToList();
         }
     }
 

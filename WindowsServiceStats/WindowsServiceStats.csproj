@@ -63,5 +63,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLLSmartVideoDB\BLLSmartVideoDB.csproj">
+      <Project>{3e7e6970-988c-4701-b9a9-145e31ec6549}</Project>
+      <Name>BLLSmartVideoDB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

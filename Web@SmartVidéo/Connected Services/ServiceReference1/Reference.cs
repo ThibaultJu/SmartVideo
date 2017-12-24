@@ -571,6 +571,115 @@ namespace Web_SmartVidéo.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StatistiquesDTO", Namespace="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO")]
+    [System.SerializableAttribute()]
+    public partial class StatistiquesDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdRequeteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdStatsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NbRechercheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdRequete {
+            get {
+                return this.IdRequeteField;
+            }
+            set {
+                if ((this.IdRequeteField.Equals(value) != true)) {
+                    this.IdRequeteField = value;
+                    this.RaisePropertyChanged("IdRequete");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdStats {
+            get {
+                return this.IdStatsField;
+            }
+            set {
+                if ((this.IdStatsField.Equals(value) != true)) {
+                    this.IdStatsField = value;
+                    this.RaisePropertyChanged("IdStats");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NbRecherche {
+            get {
+                return this.NbRechercheField;
+            }
+            set {
+                if ((this.NbRechercheField.Equals(value) != true)) {
+                    this.NbRechercheField = value;
+                    this.RaisePropertyChanged("NbRecherche");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -670,6 +779,12 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLocation", ReplyAction="http://tempuri.org/IService1/getLocationResponse")]
         System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.LocationDTO[]> getLocationAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getStatistiques", ReplyAction="http://tempuri.org/IService1/getStatistiquesResponse")]
+        Web_SmartVidéo.ServiceReference1.StatistiquesDTO[] getStatistiques();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getStatistiques", ReplyAction="http://tempuri.org/IService1/getStatistiquesResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.StatistiquesDTO[]> getStatistiquesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -825,6 +940,14 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.LocationDTO[]> getLocationAsync(string username) {
             return base.Channel.getLocationAsync(username);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.StatistiquesDTO[] getStatistiques() {
+            return base.Channel.getStatistiques();
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.StatistiquesDTO[]> getStatistiquesAsync() {
+            return base.Channel.getStatistiquesAsync();
         }
     }
 }

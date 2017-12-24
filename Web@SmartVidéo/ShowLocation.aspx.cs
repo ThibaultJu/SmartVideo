@@ -25,6 +25,10 @@ namespace Web_SmartVidéo
                 link.InnerText = (String)Session["Log"];
                 link.HRef = (String)Session["LogOK"];
             }
+            if(Session["Log"].Equals("Login"))
+            {
+                Server.Transfer("Default.aspx", true);
+            }
             listLocations = aC.GetLocation((String)Session["Log"]);
         }
 

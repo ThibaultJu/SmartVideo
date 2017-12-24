@@ -159,6 +159,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Statistiques.aspx" />
     <Content Include="ShowLocation.aspx" />
     <Content Include="LocationFilm.aspx" />
     <Content Include="DetailsF.aspx" />
@@ -205,6 +206,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Web_SmartVidéo.ServiceReference1.LocationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Web_SmartVidéo.ServiceReference1.StatistiquesDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -261,6 +265,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Statistiques.aspx.cs">
+      <DependentUpon>Statistiques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistiques.aspx.designer.cs">
+      <DependentUpon>Statistiques.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShowLocation.aspx.cs">
       <DependentUpon>ShowLocation.aspx</DependentUpon>

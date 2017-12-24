@@ -5,3 +5,10 @@ C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServic
 C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.exe
 C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\obj\Debug\WindowsServiceStats.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\BLLSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\SmartVideoDBDTO.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\DALSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\BLLSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\SmartVideoDBDTO.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\DALSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\WindowsServiceStats\bin\Debug\DALSmartVideoDB.dll.config

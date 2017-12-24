@@ -87,5 +87,9 @@ namespace WcfServ
         {
             return BllSmart.getLocation(username);
         }
+        public List<StatistiquesDTO> getStatistiques()
+        {
+            return BllSmart.getStatistiques();
+        }
     }
 }

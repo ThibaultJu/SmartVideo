@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StatistiquesDTO.cs" />
+    <Compile Include="HitsDTO.cs" />
     <Compile Include="LocationDTO.cs" />
     <Compile Include="UtilisateursDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
