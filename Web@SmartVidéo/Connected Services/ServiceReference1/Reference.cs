@@ -702,6 +702,12 @@ namespace Web_SmartVidéo.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorById", ReplyAction="http://tempuri.org/IService1/GetActorByIdResponse")]
         System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorByIdAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActor", ReplyAction="http://tempuri.org/IService1/GetActorResponse")]
+        Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActor(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActor", ReplyAction="http://tempuri.org/IService1/GetActorResponse")]
+        System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorByName", ReplyAction="http://tempuri.org/IService1/GetActorByNameResponse")]
         Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorByName(string name);
         
@@ -836,6 +842,14 @@ namespace Web_SmartVidéo.ServiceReference1 {
         
         public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorByIdAsync(int id) {
             return base.Channel.GetActorByIdAsync(id);
+        }
+        
+        public Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActor(int id) {
+            return base.Channel.GetActor(id);
+        }
+        
+        public System.Threading.Tasks.Task<Web_SmartVidéo.ServiceReference1.ActeurDTO[]> GetActorAsync(int id) {
+            return base.Channel.GetActorAsync(id);
         }
         
         public Web_SmartVidéo.ServiceReference1.ActeurDTO[] GetActorByName(string name) {

@@ -55,7 +55,10 @@ namespace Web_SmartVidéo
         {
             return (service.GetActorById(id).ToList()).First();
         }
-
+        public ActeurDTO GetActor(int id)
+        {
+            return (service.GetActor(id).ToList()).First();
+        }
         public List<FilmDTO>  RechercheFilmByActors (List<ActeurDTO> listActors)
         {
             List<FilmDTO> ListFilms = new List<FilmDTO>();

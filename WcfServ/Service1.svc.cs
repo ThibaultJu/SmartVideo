@@ -34,7 +34,10 @@ namespace WcfServ
         {
             return Bll.GetActorById(id);
         }
-
+        public List<ActeurDTO> GetActor(int id)
+        {
+            return Bll.GetActor(id);
+        }
         public List<ActeurDTO> GetActorByName(string name)
         {
             return Bll.GetActorByName(name);

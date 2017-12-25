@@ -37,4 +37,3 @@ C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.cspro
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.csproj.CoreCompileInputs.cache
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.exe
 C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.pdb
-C:\Users\tibha\Desktop\C#\SmartVideo\SmartVideoWpf\obj\Debug\SmartVideoWpf.csprojResolveAssemblyReference.cache

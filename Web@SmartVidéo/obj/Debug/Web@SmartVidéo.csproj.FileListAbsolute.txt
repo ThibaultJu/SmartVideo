@@ -47,3 +47,10 @@ C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.c
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.dll
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.pdb
 C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\obj\Debug\Web@SmartVidéo.csprojResolveAssemblyReference.cache
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\BLLSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\SmartVideoDBDTO.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\DALSmartVideoDB.dll
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\BLLSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\SmartVideoDBDTO.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\DALSmartVideoDB.pdb
+C:\Users\tibha\Desktop\C#\SmartVideo\Web@SmartVidéo\bin\DALSmartVideoDB.dll.config
