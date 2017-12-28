@@ -15,12 +15,14 @@ namespace DAL
 
         public static DalSingleton Singleton()
         {
-            return _instance ?? (_instance = new DalSingleton("PC-THIBAULT", "FilmDB"));
+            return _instance ?? (_instance = new DalSingleton("PC-THIBAULT", "FilmDB" ));
         }
 
         public DalSingleton(String servername, String DalSingletonname)
         {
-            String connectionString = "Data Source = " + servername + " ; Initial Catalog =" + DalSingletonname + "; Integrated Security = True";
+
+            //"Data Source=serverip\SQLEXPRESS;Initial Catalog = database; User ID = username; Password = mypassword"
+            String connectionString = "Data Source = " + servername + " ; Initial Catalog =" + DalSingletonname + ";User ID = BDSmartVideo; Password = 123; Integrated Security = True";
 
             try
             {

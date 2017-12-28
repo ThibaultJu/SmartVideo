@@ -22,7 +22,7 @@ namespace WindowsServiceStats
             InitializeComponent();
             bllSmart = new BLLSmartVideo();
             _timer = new System.Timers.Timer();
-            _scheduleTime = DateTime.Today.AddHours(10).AddMinutes(25);
+            _scheduleTime = DateTime.Today.AddHours(23).AddMinutes(58);
         }
         private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
