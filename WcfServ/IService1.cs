@@ -26,6 +26,9 @@ namespace WcfServ
         List<ActeurDTO> GetActorById(int id);
 
         [OperationContract]
+        List<ActeurDTO> GetActor(int id);
+
+        [OperationContract]
         List<ActeurDTO> GetActorByName(string name);
 
         [OperationContract]

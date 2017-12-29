@@ -50,6 +50,9 @@ namespace BLL
         {
             DalSingleton.Singleton().SetTrailer(id, trailer);
         }
-
+        public List<ActeurDTO> GetActor(int id)
+        {
+            return DalSingleton.Singleton().GetActor(id);
+        }
     }
 }

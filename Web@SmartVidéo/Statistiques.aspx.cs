@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using BLLSmartVideoDB;
 
 namespace Web_SmartVidéo
 {

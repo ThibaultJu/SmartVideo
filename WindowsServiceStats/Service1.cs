@@ -22,17 +22,17 @@ namespace WindowsServiceStats
             InitializeComponent();
             bllSmart = new BLLSmartVideo();
             _timer = new System.Timers.Timer();
-            _scheduleTime = DateTime.Today.AddHours(16).AddMinutes(0);
+            _scheduleTime = DateTime.Today.AddHours(15).AddMinutes(0);
         }
         private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             DateTime now = DateTime.Now;
             if (_scheduleTime < DateTime.Now)
             {
-                TimeSpan span = now - DateTime.Now;
-                _scheduleTime = _scheduleTime.AddMilliseconds(span.Milliseconds).AddDays(1);
                 bllSmart.setStatistiques("Film", DateTime.Today);
                 bllSmart.setStatistiques("Acteur", DateTime.Today);
+                TimeSpan span = now - DateTime.Now;
+                _scheduleTime = _scheduleTime.AddMilliseconds(span.Milliseconds).AddDays(1);
             }
           
         }

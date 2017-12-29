@@ -15,12 +15,14 @@ namespace DAL
 
         public static DalSingleton Singleton()
         {
-            return _instance ?? (_instance = new DalSingleton("PC-THIBAULT", "FilmDB"));
+            return _instance ?? (_instance = new DalSingleton("PC-THIBAULT", "FilmDB" ));
         }
 
         public DalSingleton(String servername, String DalSingletonname)
         {
-            String connectionString = "Data Source = " + servername + " ; Initial Catalog =" + DalSingletonname + "; Integrated Security = True";
+
+            //"Data Source=serverip\SQLEXPRESS;Initial Catalog = database; User ID = username; Password = mypassword"
+            String connectionString = "Data Source = " + servername + " ; Initial Catalog =" + DalSingletonname + ";User ID = BDSmartVideo; Password = 123; Integrated Security = True";
 
             try
             {
@@ -85,6 +87,26 @@ namespace DAL
         public List<ActeurDTO> GetActorById(int id)
         {
             var query = "SELECT Distinct Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
+            try
+            {
+                var list = _context.ExecuteQuery<ActeurDTO>(query).Select(a => new ActeurDTO
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    Character = a.Character
+                }).ToList();
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " erreur d'affichage des résultats");
+                return new List<ActeurDTO>();
+            }
+        }
+        public List<ActeurDTO> GetActor(int id)
+        {
+            //var query = "SELECT Distinct Actor.* FROM FilmActor INNER JOIN Actor ON FilmActor.id_actor = Actor.id WHERE FilmActor.id_film = " + id + ";";
+            var query = "SELECT * FROM Actor WHERE id = " + id + ";";
             try
             {
                 var list = _context.ExecuteQuery<ActeurDTO>(query).Select(a => new ActeurDTO

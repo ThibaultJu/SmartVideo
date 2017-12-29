@@ -33,15 +33,15 @@ namespace DALSmartVideoDB
     partial void InsertUtilisateur(Utilisateur instance);
     partial void UpdateUtilisateur(Utilisateur instance);
     partial void DeleteUtilisateur(Utilisateur instance);
-    partial void InsertLocationsFilm(LocationsFilm instance);
-    partial void UpdateLocationsFilm(LocationsFilm instance);
-    partial void DeleteLocationsFilm(LocationsFilm instance);
     partial void InsertHit(Hit instance);
     partial void UpdateHit(Hit instance);
     partial void DeleteHit(Hit instance);
     partial void InsertStatistique(Statistique instance);
     partial void UpdateStatistique(Statistique instance);
     partial void DeleteStatistique(Statistique instance);
+    partial void InsertLocationsFilm(LocationsFilm instance);
+    partial void UpdateLocationsFilm(LocationsFilm instance);
+    partial void DeleteLocationsFilm(LocationsFilm instance);
     #endregion
 		
 		public DalSmartVideoDBDataContext() : 
@@ -82,14 +82,6 @@ namespace DALSmartVideoDB
 			}
 		}
 		
-		public System.Data.Linq.Table<LocationsFilm> LocationsFilms
-		{
-			get
-			{
-				return this.GetTable<LocationsFilm>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Hit> Hits
 		{
 			get
@@ -103,6 +95,14 @@ namespace DALSmartVideoDB
 			get
 			{
 				return this.GetTable<Statistique>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LocationsFilm> LocationsFilms
+		{
+			get
+			{
+				return this.GetTable<LocationsFilm>();
 			}
 		}
 	}
@@ -266,205 +266,6 @@ namespace DALSmartVideoDB
 		{
 			this.SendPropertyChanging();
 			entity.Utilisateur1 = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LocationsFilms")]
-	public partial class LocationsFilm : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _idLocationsFilm;
-		
-		private int _idFilm;
-		
-		private string _Utilisateur;
-		
-		private System.DateTime _DateDébut;
-		
-		private System.DateTime _DateFin;
-		
-		private EntityRef<Utilisateur> _Utilisateur1;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidLocationsFilmChanging(int value);
-    partial void OnidLocationsFilmChanged();
-    partial void OnidFilmChanging(int value);
-    partial void OnidFilmChanged();
-    partial void OnUtilisateurChanging(string value);
-    partial void OnUtilisateurChanged();
-    partial void OnDateDébutChanging(System.DateTime value);
-    partial void OnDateDébutChanged();
-    partial void OnDateFinChanging(System.DateTime value);
-    partial void OnDateFinChanged();
-    #endregion
-		
-		public LocationsFilm()
-		{
-			this._Utilisateur1 = default(EntityRef<Utilisateur>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLocationsFilm", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int idLocationsFilm
-		{
-			get
-			{
-				return this._idLocationsFilm;
-			}
-			set
-			{
-				if ((this._idLocationsFilm != value))
-				{
-					this.OnidLocationsFilmChanging(value);
-					this.SendPropertyChanging();
-					this._idLocationsFilm = value;
-					this.SendPropertyChanged("idLocationsFilm");
-					this.OnidLocationsFilmChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idFilm", DbType="Int NOT NULL")]
-		public int idFilm
-		{
-			get
-			{
-				return this._idFilm;
-			}
-			set
-			{
-				if ((this._idFilm != value))
-				{
-					this.OnidFilmChanging(value);
-					this.SendPropertyChanging();
-					this._idFilm = value;
-					this.SendPropertyChanged("idFilm");
-					this.OnidFilmChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Utilisateur", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Utilisateur
-		{
-			get
-			{
-				return this._Utilisateur;
-			}
-			set
-			{
-				if ((this._Utilisateur != value))
-				{
-					if (this._Utilisateur1.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnUtilisateurChanging(value);
-					this.SendPropertyChanging();
-					this._Utilisateur = value;
-					this.SendPropertyChanged("Utilisateur");
-					this.OnUtilisateurChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateDébut", DbType="Date NOT NULL")]
-		public System.DateTime DateDébut
-		{
-			get
-			{
-				return this._DateDébut;
-			}
-			set
-			{
-				if ((this._DateDébut != value))
-				{
-					this.OnDateDébutChanging(value);
-					this.SendPropertyChanging();
-					this._DateDébut = value;
-					this.SendPropertyChanged("DateDébut");
-					this.OnDateDébutChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateFin", DbType="Date NOT NULL")]
-		public System.DateTime DateFin
-		{
-			get
-			{
-				return this._DateFin;
-			}
-			set
-			{
-				if ((this._DateFin != value))
-				{
-					this.OnDateFinChanging(value);
-					this.SendPropertyChanging();
-					this._DateFin = value;
-					this.SendPropertyChanged("DateFin");
-					this.OnDateFinChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Utilisateur_LocationsFilm", Storage="_Utilisateur1", ThisKey="Utilisateur", OtherKey="Email", IsForeignKey=true)]
-		public Utilisateur Utilisateur1
-		{
-			get
-			{
-				return this._Utilisateur1.Entity;
-			}
-			set
-			{
-				Utilisateur previousValue = this._Utilisateur1.Entity;
-				if (((previousValue != value) 
-							|| (this._Utilisateur1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Utilisateur1.Entity = null;
-						previousValue.LocationsFilms.Remove(this);
-					}
-					this._Utilisateur1.Entity = value;
-					if ((value != null))
-					{
-						value.LocationsFilms.Add(this);
-						this._Utilisateur = value.Email;
-					}
-					else
-					{
-						this._Utilisateur = default(string);
-					}
-					this.SendPropertyChanged("Utilisateur1");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -828,6 +629,205 @@ namespace DALSmartVideoDB
 						this._idRequete = default(int);
 					}
 					this.SendPropertyChanged("Hit");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LocationsFilms")]
+	public partial class LocationsFilm : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idLocationsFilm;
+		
+		private int _idFilm;
+		
+		private string _Utilisateur;
+		
+		private System.DateTime _DateDebut;
+		
+		private System.DateTime _DateFin;
+		
+		private EntityRef<Utilisateur> _Utilisateur1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidLocationsFilmChanging(int value);
+    partial void OnidLocationsFilmChanged();
+    partial void OnidFilmChanging(int value);
+    partial void OnidFilmChanged();
+    partial void OnUtilisateurChanging(string value);
+    partial void OnUtilisateurChanged();
+    partial void OnDateDebutChanging(System.DateTime value);
+    partial void OnDateDebutChanged();
+    partial void OnDateFinChanging(System.DateTime value);
+    partial void OnDateFinChanged();
+    #endregion
+		
+		public LocationsFilm()
+		{
+			this._Utilisateur1 = default(EntityRef<Utilisateur>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLocationsFilm", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idLocationsFilm
+		{
+			get
+			{
+				return this._idLocationsFilm;
+			}
+			set
+			{
+				if ((this._idLocationsFilm != value))
+				{
+					this.OnidLocationsFilmChanging(value);
+					this.SendPropertyChanging();
+					this._idLocationsFilm = value;
+					this.SendPropertyChanged("idLocationsFilm");
+					this.OnidLocationsFilmChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idFilm", DbType="Int NOT NULL")]
+		public int idFilm
+		{
+			get
+			{
+				return this._idFilm;
+			}
+			set
+			{
+				if ((this._idFilm != value))
+				{
+					this.OnidFilmChanging(value);
+					this.SendPropertyChanging();
+					this._idFilm = value;
+					this.SendPropertyChanged("idFilm");
+					this.OnidFilmChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Utilisateur", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Utilisateur
+		{
+			get
+			{
+				return this._Utilisateur;
+			}
+			set
+			{
+				if ((this._Utilisateur != value))
+				{
+					if (this._Utilisateur1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUtilisateurChanging(value);
+					this.SendPropertyChanging();
+					this._Utilisateur = value;
+					this.SendPropertyChanged("Utilisateur");
+					this.OnUtilisateurChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateDebut", DbType="Date NOT NULL")]
+		public System.DateTime DateDebut
+		{
+			get
+			{
+				return this._DateDebut;
+			}
+			set
+			{
+				if ((this._DateDebut != value))
+				{
+					this.OnDateDebutChanging(value);
+					this.SendPropertyChanging();
+					this._DateDebut = value;
+					this.SendPropertyChanged("DateDebut");
+					this.OnDateDebutChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateFin", DbType="Date NOT NULL")]
+		public System.DateTime DateFin
+		{
+			get
+			{
+				return this._DateFin;
+			}
+			set
+			{
+				if ((this._DateFin != value))
+				{
+					this.OnDateFinChanging(value);
+					this.SendPropertyChanging();
+					this._DateFin = value;
+					this.SendPropertyChanged("DateFin");
+					this.OnDateFinChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Utilisateur_LocationsFilm", Storage="_Utilisateur1", ThisKey="Utilisateur", OtherKey="Email", IsForeignKey=true)]
+		public Utilisateur Utilisateur1
+		{
+			get
+			{
+				return this._Utilisateur1.Entity;
+			}
+			set
+			{
+				Utilisateur previousValue = this._Utilisateur1.Entity;
+				if (((previousValue != value) 
+							|| (this._Utilisateur1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Utilisateur1.Entity = null;
+						previousValue.LocationsFilms.Remove(this);
+					}
+					this._Utilisateur1.Entity = value;
+					if ((value != null))
+					{
+						value.LocationsFilms.Add(this);
+						this._Utilisateur = value.Email;
+					}
+					else
+					{
+						this._Utilisateur = default(string);
+					}
+					this.SendPropertyChanged("Utilisateur1");
 				}
 			}
 		}

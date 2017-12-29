@@ -9,7 +9,7 @@
         <p><%foreach (Web_SmartVidéo.ServiceReference1.StatistiquesDTO stats in this.listStatistiques)
 				{%>
 
-					<%if (stats.Type.Equals("Film    "))
+					<%if (stats.Type.Equals("Film      "))
 						{ %>
 						<%this.film = this.aC.GetFilm(stats.IdRequete); %>
 						<img src="http://image.tmdb.org/t/p/w185/<% =film.Posterpath %>" alt="Mountain View" >
@@ -22,8 +22,9 @@
 					<%}
 						else
 						{%>
-								<%this.actor = this.aC.RechercheActorByID(stats.IdRequete); %>
+								<%this.actor = this.aC.GetActor(stats.IdRequete); %>
 								<p>Acteur : <%=actor.Name %></p><br />
+								<p>Personnage : <%=actor.Character %></p><br />
 								<p>Nombre de recherches effectuées : <%=stats.NbRecherche %></p><br />
 								<br />
 								<br />
