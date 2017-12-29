@@ -22,9 +22,6 @@ namespace Web_SmartVidéo
             listStatistiques = new List<StatistiquesDTO>();
             actor = new ActeurDTO();
             film = new FilmDTO();
-            BLLSmartVideo bllSmart = new BLLSmartVideo();
-            bllSmart.setStatistiques("Film", DateTime.Today);
-            bllSmart.setStatistiques("Acteur", DateTime.Today);
             if (Session["Log"] != null && Session["LogOK"] != null)
             {
                 HtmlAnchor link = (HtmlAnchor)this.Master.FindControl("Log");

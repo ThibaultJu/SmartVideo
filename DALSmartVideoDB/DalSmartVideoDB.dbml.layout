@@ -8,19 +8,6 @@
         <elementListCompartment Id="3d5e5547-ec21-4d51-b5de-9685768333b5" absoluteBounds="0.51500000000000012, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="efbdfc6a-3120-46cd-b396-a1590c42aba8" absoluteBounds="4.125, 3.75, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/DalSmartVideoDBDataContext/LocationsFilm" />
-      <nestedChildShapes>
-        <elementListCompartment Id="3df71725-b967-4578-bd5f-48a4aa3c7982" absoluteBounds="4.14, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(2.5 : 4.53929768880208); (4.125 : 4.53929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/DalSmartVideoDBDataContext/Utilisateur/Utilisateur_LocationsFilm" />
-      <nodes>
-        <classShapeMoniker Id="a30a611a-07ab-4ec6-9597-494eb6ae155e" />
-        <classShapeMoniker Id="efbdfc6a-3120-46cd-b396-a1590c42aba8" />
-      </nodes>
-    </associationConnector>
     <classShape Id="8c9fcb4a-852e-45fb-a1e4-a54ffcfaae74" absoluteBounds="1.375, 1, 2, 1.7708968098958331">
       <DataClassMoniker Name="/DalSmartVideoDBDataContext/Hit" />
       <nestedChildShapes>
@@ -33,11 +20,24 @@
         <elementListCompartment Id="2ef3d9bc-b161-4a2e-96ee-b1829089ffa8" absoluteBounds="5.64, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 1.94794840494792); (5.625 : 1.94794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.375 : 1.94794840494792); (5.625 : 1.94794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DalSmartVideoDBDataContext/Hit/Hit_Statistique" />
       <nodes>
         <classShapeMoniker Id="8c9fcb4a-852e-45fb-a1e4-a54ffcfaae74" />
         <classShapeMoniker Id="2fad4aab-6cdb-4a32-aeec-f5d9f7f8a7fe" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="938cdf23-85e0-48c7-b9e6-c2a5248aaff0" absoluteBounds="4.75, 3.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DalSmartVideoDBDataContext/LocationsFilm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8998c4a-9ae3-4342-a2cb-142e8ef0eca0" absoluteBounds="4.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 4.53929768880208); (4.75 : 4.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DalSmartVideoDBDataContext/Utilisateur/Utilisateur_LocationsFilm" />
+      <nodes>
+        <classShapeMoniker Id="a30a611a-07ab-4ec6-9597-494eb6ae155e" />
+        <classShapeMoniker Id="938cdf23-85e0-48c7-b9e6-c2a5248aaff0" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

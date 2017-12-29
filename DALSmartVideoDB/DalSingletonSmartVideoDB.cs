@@ -157,7 +157,7 @@ namespace DALSmartVideoDB
                 Loc.idLocationsFilm = count + 1;
                 Loc.idFilm = id;
                 Loc.Utilisateur = user;
-                Loc.DateDébut = DateTime;
+                Loc.DateDebut = DateTime;
                 Loc.DateFin = DateTime.AddMonths(duree);
                 _context.LocationsFilms.InsertOnSubmit(Loc);
                 try

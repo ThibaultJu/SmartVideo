@@ -21,9 +21,7 @@ namespace Web_SmartVidéo
         {
             listFilms = new List<FilmDTO>();
             aC = new AuthenticationControler();
-            //aC.setStatistiques();
             BLLSmartVideo bllSmart = new BLLSmartVideo();
-            bllSmart.setStatistiques("Acteur", DateTime.Today);
 
             if (Session["Log"] != null && Session["LogOK"] != null)
             {
