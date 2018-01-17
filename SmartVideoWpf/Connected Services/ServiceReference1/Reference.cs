@@ -9,7 +9,304 @@
 //------------------------------------------------------------------------------
 
 namespace SmartVideoWpf.ServiceReference1 {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UtilisateursDTO", Namespace="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO")]
+    [System.SerializableAttribute()]
+    public partial class UtilisateursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PseudoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Carte {
+            get {
+                return this.CarteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarteField, value) != true)) {
+                    this.CarteField = value;
+                    this.RaisePropertyChanged("Carte");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pseudo {
+            get {
+                return this.PseudoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PseudoField, value) != true)) {
+                    this.PseudoField = value;
+                    this.RaisePropertyChanged("Pseudo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LocationDTO", Namespace="http://schemas.datacontract.org/2004/07/FilmDTOLibrary")]
+    [System.SerializableAttribute()]
+    public partial class LocationDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateDebutField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdFilmField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateDebut {
+            get {
+                return this.DateDebutField;
+            }
+            set {
+                if ((this.DateDebutField.Equals(value) != true)) {
+                    this.DateDebutField = value;
+                    this.RaisePropertyChanged("DateDebut");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateFin {
+            get {
+                return this.DateFinField;
+            }
+            set {
+                if ((this.DateFinField.Equals(value) != true)) {
+                    this.DateFinField = value;
+                    this.RaisePropertyChanged("DateFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdFilm {
+            get {
+                return this.IdFilmField;
+            }
+            set {
+                if ((this.IdFilmField.Equals(value) != true)) {
+                    this.IdFilmField = value;
+                    this.RaisePropertyChanged("IdFilm");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StatistiquesDTO", Namespace="http://schemas.datacontract.org/2004/07/SmartVideoDBDTO")]
+    [System.SerializableAttribute()]
+    public partial class StatistiquesDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdRequeteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdStatsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NbRechercheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdRequete {
+            get {
+                return this.IdRequeteField;
+            }
+            set {
+                if ((this.IdRequeteField.Equals(value) != true)) {
+                    this.IdRequeteField = value;
+                    this.RaisePropertyChanged("IdRequete");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdStats {
+            get {
+                return this.IdStatsField;
+            }
+            set {
+                if ((this.IdStatsField.Equals(value) != true)) {
+                    this.IdStatsField = value;
+                    this.RaisePropertyChanged("IdStats");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NbRecherche {
+            get {
+                return this.NbRechercheField;
+            }
+            set {
+                if ((this.NbRechercheField.Equals(value) != true)) {
+                    this.NbRechercheField = value;
+                    this.RaisePropertyChanged("NbRecherche");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
@@ -21,35 +318,107 @@ namespace SmartVideoWpf.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilms", ReplyAction="http://tempuri.org/IService1/GetFilmsResponse")]
         System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmsAsync(int debut, int nb);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreWithId", ReplyAction="http://tempuri.org/IService1/GetGenreWithIdResponse")]
-        FilmDTOLibrary.GenreDTO[] GetGenreWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreById", ReplyAction="http://tempuri.org/IService1/GetGenreByIdResponse")]
+        FilmDTOLibrary.GenreDTO[] GetGenreById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreWithId", ReplyAction="http://tempuri.org/IService1/GetGenreWithIdResponse")]
-        System.Threading.Tasks.Task<FilmDTOLibrary.GenreDTO[]> GetGenreWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGenreById", ReplyAction="http://tempuri.org/IService1/GetGenreByIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.GenreDTO[]> GetGenreByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorWithId", ReplyAction="http://tempuri.org/IService1/GetActorWithIdResponse")]
-        FilmDTOLibrary.ActeurDTO[] GetActorWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorById", ReplyAction="http://tempuri.org/IService1/GetActorByIdResponse")]
+        FilmDTOLibrary.ActeurDTO[] GetActorById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorWithId", ReplyAction="http://tempuri.org/IService1/GetActorWithIdResponse")]
-        System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorById", ReplyAction="http://tempuri.org/IService1/GetActorByIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
-        FilmDTOLibrary.RealisateurDTO[] GetDirectorWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActor", ReplyAction="http://tempuri.org/IService1/GetActorResponse")]
+        FilmDTOLibrary.ActeurDTO[] GetActor(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorWithId", ReplyAction="http://tempuri.org/IService1/GetDirectorWithIdResponse")]
-        System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActor", ReplyAction="http://tempuri.org/IService1/GetActorResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
-        FilmDTOLibrary.FilmDTO[] GetFilmWithId(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorByName", ReplyAction="http://tempuri.org/IService1/GetActorByNameResponse")]
+        FilmDTOLibrary.ActeurDTO[] GetActorByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmWithId", ReplyAction="http://tempuri.org/IService1/GetFilmWithIdResponse")]
-        System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmWithIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetActorByName", ReplyAction="http://tempuri.org/IService1/GetActorByNameResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorByNameAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByActors", ReplyAction="http://tempuri.org/IService1/GetFilmByActorsResponse")]
+        FilmDTOLibrary.FilmDTO[] GetFilmByActors(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByActors", ReplyAction="http://tempuri.org/IService1/GetFilmByActorsResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmByActorsAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorById", ReplyAction="http://tempuri.org/IService1/GetDirectorByIdResponse")]
+        FilmDTOLibrary.RealisateurDTO[] GetDirectorById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDirectorById", ReplyAction="http://tempuri.org/IService1/GetDirectorByIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmById", ReplyAction="http://tempuri.org/IService1/GetFilmByIdResponse")]
+        FilmDTOLibrary.FilmDTO[] GetFilmById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmById", ReplyAction="http://tempuri.org/IService1/GetFilmByIdResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByName", ReplyAction="http://tempuri.org/IService1/GetFilmByNameResponse")]
+        FilmDTOLibrary.FilmDTO[] GetFilmByName(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetFilmByName", ReplyAction="http://tempuri.org/IService1/GetFilmByNameResponse")]
+        System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmByNameAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetTrailer", ReplyAction="http://tempuri.org/IService1/SetTrailerResponse")]
         void SetTrailer(int id, string trailer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetTrailer", ReplyAction="http://tempuri.org/IService1/SetTrailerResponse")]
         System.Threading.Tasks.Task SetTrailerAsync(int id, string trailer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        string Login(string E, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        System.Threading.Tasks.Task<string> LoginAsync(string E, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/findUser", ReplyAction="http://tempuri.org/IService1/findUserResponse")]
+        SmartVideoWpf.ServiceReference1.UtilisateursDTO findUser(string E);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/findUser", ReplyAction="http://tempuri.org/IService1/findUserResponse")]
+        System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.UtilisateursDTO> findUserAsync(string E);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateUser", ReplyAction="http://tempuri.org/IService1/UpdateUserResponse")]
+        void UpdateUser(SmartVideoWpf.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateUser", ReplyAction="http://tempuri.org/IService1/UpdateUserResponse")]
+        System.Threading.Tasks.Task UpdateUserAsync(SmartVideoWpf.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertUser", ReplyAction="http://tempuri.org/IService1/InsertUserResponse")]
+        bool InsertUser(SmartVideoWpf.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertUser", ReplyAction="http://tempuri.org/IService1/InsertUserResponse")]
+        System.Threading.Tasks.Task<bool> InsertUserAsync(SmartVideoWpf.ServiceReference1.UtilisateursDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertHits", ReplyAction="http://tempuri.org/IService1/InsertHitsResponse")]
+        bool InsertHits(int id, string type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertHits", ReplyAction="http://tempuri.org/IService1/InsertHitsResponse")]
+        System.Threading.Tasks.Task<bool> InsertHitsAsync(int id, string type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertLocation", ReplyAction="http://tempuri.org/IService1/InsertLocationResponse")]
+        bool InsertLocation(int id, string user, int duree);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertLocation", ReplyAction="http://tempuri.org/IService1/InsertLocationResponse")]
+        System.Threading.Tasks.Task<bool> InsertLocationAsync(int id, string user, int duree);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLocation", ReplyAction="http://tempuri.org/IService1/getLocationResponse")]
+        SmartVideoWpf.ServiceReference1.LocationDTO[] getLocation(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getLocation", ReplyAction="http://tempuri.org/IService1/getLocationResponse")]
+        System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.LocationDTO[]> getLocationAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getStatistiques", ReplyAction="http://tempuri.org/IService1/getStatistiquesResponse")]
+        SmartVideoWpf.ServiceReference1.StatistiquesDTO[] getStatistiques();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getStatistiques", ReplyAction="http://tempuri.org/IService1/getStatistiquesResponse")]
+        System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.StatistiquesDTO[]> getStatistiquesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -87,36 +456,68 @@ namespace SmartVideoWpf.ServiceReference1 {
             return base.Channel.GetFilmsAsync(debut, nb);
         }
         
-        public FilmDTOLibrary.GenreDTO[] GetGenreWithId(int id) {
-            return base.Channel.GetGenreWithId(id);
+        public FilmDTOLibrary.GenreDTO[] GetGenreById(int id) {
+            return base.Channel.GetGenreById(id);
         }
         
-        public System.Threading.Tasks.Task<FilmDTOLibrary.GenreDTO[]> GetGenreWithIdAsync(int id) {
-            return base.Channel.GetGenreWithIdAsync(id);
+        public System.Threading.Tasks.Task<FilmDTOLibrary.GenreDTO[]> GetGenreByIdAsync(int id) {
+            return base.Channel.GetGenreByIdAsync(id);
         }
         
-        public FilmDTOLibrary.ActeurDTO[] GetActorWithId(int id) {
-            return base.Channel.GetActorWithId(id);
+        public FilmDTOLibrary.ActeurDTO[] GetActorById(int id) {
+            return base.Channel.GetActorById(id);
         }
         
-        public System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorWithIdAsync(int id) {
-            return base.Channel.GetActorWithIdAsync(id);
+        public System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorByIdAsync(int id) {
+            return base.Channel.GetActorByIdAsync(id);
         }
         
-        public FilmDTOLibrary.RealisateurDTO[] GetDirectorWithId(int id) {
-            return base.Channel.GetDirectorWithId(id);
+        public FilmDTOLibrary.ActeurDTO[] GetActor(int id) {
+            return base.Channel.GetActor(id);
         }
         
-        public System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorWithIdAsync(int id) {
-            return base.Channel.GetDirectorWithIdAsync(id);
+        public System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorAsync(int id) {
+            return base.Channel.GetActorAsync(id);
         }
         
-        public FilmDTOLibrary.FilmDTO[] GetFilmWithId(int id) {
-            return base.Channel.GetFilmWithId(id);
+        public FilmDTOLibrary.ActeurDTO[] GetActorByName(string name) {
+            return base.Channel.GetActorByName(name);
         }
         
-        public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmWithIdAsync(int id) {
-            return base.Channel.GetFilmWithIdAsync(id);
+        public System.Threading.Tasks.Task<FilmDTOLibrary.ActeurDTO[]> GetActorByNameAsync(string name) {
+            return base.Channel.GetActorByNameAsync(name);
+        }
+        
+        public FilmDTOLibrary.FilmDTO[] GetFilmByActors(int id) {
+            return base.Channel.GetFilmByActors(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmByActorsAsync(int id) {
+            return base.Channel.GetFilmByActorsAsync(id);
+        }
+        
+        public FilmDTOLibrary.RealisateurDTO[] GetDirectorById(int id) {
+            return base.Channel.GetDirectorById(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.RealisateurDTO[]> GetDirectorByIdAsync(int id) {
+            return base.Channel.GetDirectorByIdAsync(id);
+        }
+        
+        public FilmDTOLibrary.FilmDTO[] GetFilmById(int id) {
+            return base.Channel.GetFilmById(id);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmByIdAsync(int id) {
+            return base.Channel.GetFilmByIdAsync(id);
+        }
+        
+        public FilmDTOLibrary.FilmDTO[] GetFilmByName(string name) {
+            return base.Channel.GetFilmByName(name);
+        }
+        
+        public System.Threading.Tasks.Task<FilmDTOLibrary.FilmDTO[]> GetFilmByNameAsync(string name) {
+            return base.Channel.GetFilmByNameAsync(name);
         }
         
         public void SetTrailer(int id, string trailer) {
@@ -125,6 +526,70 @@ namespace SmartVideoWpf.ServiceReference1 {
         
         public System.Threading.Tasks.Task SetTrailerAsync(int id, string trailer) {
             return base.Channel.SetTrailerAsync(id, trailer);
+        }
+        
+        public string Login(string E, string pass) {
+            return base.Channel.Login(E, pass);
+        }
+        
+        public System.Threading.Tasks.Task<string> LoginAsync(string E, string pass) {
+            return base.Channel.LoginAsync(E, pass);
+        }
+        
+        public SmartVideoWpf.ServiceReference1.UtilisateursDTO findUser(string E) {
+            return base.Channel.findUser(E);
+        }
+        
+        public System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.UtilisateursDTO> findUserAsync(string E) {
+            return base.Channel.findUserAsync(E);
+        }
+        
+        public void UpdateUser(SmartVideoWpf.ServiceReference1.UtilisateursDTO user) {
+            base.Channel.UpdateUser(user);
+        }
+        
+        public System.Threading.Tasks.Task UpdateUserAsync(SmartVideoWpf.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.UpdateUserAsync(user);
+        }
+        
+        public bool InsertUser(SmartVideoWpf.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.InsertUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertUserAsync(SmartVideoWpf.ServiceReference1.UtilisateursDTO user) {
+            return base.Channel.InsertUserAsync(user);
+        }
+        
+        public bool InsertHits(int id, string type) {
+            return base.Channel.InsertHits(id, type);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertHitsAsync(int id, string type) {
+            return base.Channel.InsertHitsAsync(id, type);
+        }
+        
+        public bool InsertLocation(int id, string user, int duree) {
+            return base.Channel.InsertLocation(id, user, duree);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertLocationAsync(int id, string user, int duree) {
+            return base.Channel.InsertLocationAsync(id, user, duree);
+        }
+        
+        public SmartVideoWpf.ServiceReference1.LocationDTO[] getLocation(string username) {
+            return base.Channel.getLocation(username);
+        }
+        
+        public System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.LocationDTO[]> getLocationAsync(string username) {
+            return base.Channel.getLocationAsync(username);
+        }
+        
+        public SmartVideoWpf.ServiceReference1.StatistiquesDTO[] getStatistiques() {
+            return base.Channel.getStatistiques();
+        }
+        
+        public System.Threading.Tasks.Task<SmartVideoWpf.ServiceReference1.StatistiquesDTO[]> getStatistiquesAsync() {
+            return base.Channel.getStatistiquesAsync();
         }
     }
 }

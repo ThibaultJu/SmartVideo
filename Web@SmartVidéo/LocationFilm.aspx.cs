@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace Web_SmartVidéo
 {
@@ -40,6 +41,17 @@ namespace Web_SmartVidéo
                     if(aC.InsertLocation(film.Id, (String)Session["Log"], duree))
                     {
                         Server.Transfer("Default.aspx", true);
+                    }
+                    else
+                    {
+                        if(Session["Log"] != null)
+                        {
+                            Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Erreur: le film est toujours en période de location");
+                            //Server.Transfer("Default.aspx", true);
+
+                        }                       
+                        else
+                            Server.Transfer("Login.aspx", true);
                     }
                 }
                 else
