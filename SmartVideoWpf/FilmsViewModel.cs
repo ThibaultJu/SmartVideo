@@ -25,31 +25,42 @@ namespace SmartVideoWpf
         public FilmDTO[] GetFilms(int debut, int fin)
         {
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            return(service.GetFilms(debut, fin));
+
+            List<FilmDTO> listFilms = new List<FilmDTO>();
+            List<FilmDTO> tmp = new List<FilmDTO>();
+            int i = 5;
+            while (i <= fin)
+            {
+                tmp = (service.GetFilms(debut, 5)).ToList();
+                debut = i;
+                i = i + 5;
+                listFilms.AddRange(tmp);
+            }
+            return (listFilms.ToArray());
         }
 
         public FilmDTO[] GetFilmswithId(int id)
         {
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            return (service.GetFilmWithId(id));
+            return (service.GetFilmById(id));
         }
 
         public GenreDTO[] GetGenre(int id)
         {
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            return (service.GetGenreWithId(id));     
+            return (service.GetGenreById(id));     
         }
 
         public ActeurDTO[] GetActorWithId(int id)
         {
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            return (service.GetActorWithId(id));
+            return (service.GetActorById(id));
         }
 
         public RealisateurDTO[] GetDirectorWithId(int id)
         {
             ServiceReference1.Service1Client service = new ServiceReference1.Service1Client();
-            return (service.GetDirectorWithId(id));
+            return (service.GetDirectorById(id));
         }
 
         public BitmapImage loadImage(string path)

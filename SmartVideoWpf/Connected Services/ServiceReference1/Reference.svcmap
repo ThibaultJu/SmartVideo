@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:62415/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="0831941d-27e5-416d-9511-090921f672f5" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="88646dfe-e16e-4752-addb-69ad4ae63c2c" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="b6492ecf-8233-46eb-88e1-5d494a8d8fcf" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="b6608ca8-01d7-40fc-8a09-dec90d36bc54" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?disco" />
     <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="09570266-196b-45e4-9fed-432b93acd98f" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="99e0b91c-588b-4e9a-9306-fc272260037e" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="b6492ecf-8233-46eb-88e1-5d494a8d8fcf" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="0831941d-27e5-416d-9511-090921f672f5" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="b6608ca8-01d7-40fc-8a09-dec90d36bc54" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?disco" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="88646dfe-e16e-4752-addb-69ad4ae63c2c" SourceId="1" SourceUrl="http://localhost:62415/Service1.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

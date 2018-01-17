@@ -103,6 +103,18 @@
     <None Include="Connected Services\ServiceReference1\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceReference1\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\SmartVideoWpf.ServiceReference1.LocationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\SmartVideoWpf.ServiceReference1.StatistiquesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\SmartVideoWpf.ServiceReference1.UtilisateursDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\FilmDTOLibrary.ActeurDTO.datasource" />
     <None Include="Properties\DataSources\FilmDTOLibrary.FilmDTO.datasource" />
     <None Include="Properties\DataSources\FilmDTOLibrary.GenreDTO.datasource" />
